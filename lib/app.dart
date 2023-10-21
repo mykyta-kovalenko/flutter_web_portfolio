@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'l10n/app_localizations.dart';
+import 'utils/build_context_ext.dart';
+
 class App extends StatelessWidget {
   const App({super.key});
 

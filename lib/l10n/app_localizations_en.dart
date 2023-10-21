@@ -6,4 +6,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get appName => 'App';
+
+  @override
+  String get heyImMykyta => 'Hey EMOJI I\'m Mykyta.';
 }
