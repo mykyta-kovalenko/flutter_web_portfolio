@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 
-import '../pages/home_page.dart';
+import '../ui/pages/home_page.dart';
 
 part 'app_router.gr.dart';
 

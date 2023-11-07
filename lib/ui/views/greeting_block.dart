@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/utils/build_context_ext.dart';
 
-import '../gen/assets.gen.dart';
+import '../../gen/assets.gen.dart';
 import 'nav_menu_item.dart';
 
 abstract class GreetingBlockMenuDelegate {
@@ -25,6 +25,7 @@ class GreetingBlock extends StatelessWidget {
   }
 }
 
+// Non-mobile greeting block, includes desktop and tablet.
 class _NonMobileGreeting extends StatelessWidget {
   const _NonMobileGreeting();
 
@@ -50,9 +51,7 @@ class _MobileGreeting extends StatelessWidget {
           backgroundColor: Colors.transparent,
           shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
           insetPadding: EdgeInsets.zero,
-          child: _MobileMenuPopup(
-            menuDelegate: menuDelegate,
-          ),
+          child: _MobileMenuPopup(menuDelegate: menuDelegate),
         );
       },
     );
@@ -64,18 +63,15 @@ class _MobileGreeting extends StatelessWidget {
       children: [
         _buildMenuRow(context),
         Text(context.strings.heyImMykyta),
-        Padding(
-          padding: const EdgeInsets.all(16),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(16),
-            child: Container(
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.amber, width: 8),
-              ),
-              child: Image.asset(
-                Assets.img4102.path,
-                fit: BoxFit.cover,
-              ),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(16),
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.amber, width: 8),
+            ),
+            child: Image.asset(
+              Assets.img4102.path,
+              fit: BoxFit.cover,
             ),
           ),
         ),
@@ -88,26 +84,21 @@ class _MobileGreeting extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.all(16),
-          child: Text(
-            'MK',
-            style: TextStyle(fontSize: 32),
-          ),
+        const Text(
+          'MK',
+          style: TextStyle(fontSize: 32),
         ),
-        Padding(
-          padding: const EdgeInsets.all(4),
-          child: IconButton(
-            icon: const Icon(Icons.menu_rounded),
-            iconSize: 64,
-            onPressed: () => showMenuPopup(context),
-          ),
+        IconButton(
+          icon: const Icon(Icons.menu_rounded),
+          iconSize: 64,
+          onPressed: () => showMenuPopup(context),
         ),
       ],
     );
   }
 }
 
+//TODO: Extract to separate file.
 class _MobileMenuPopup extends StatelessWidget {
   const _MobileMenuPopup({required this.menuDelegate});
 
