@@ -1,3 +1,6 @@
 part of 'app_theme.dart';
 
-abstract class AppColorThemeData {}
+abstract class AppColorThemeData {
+  Color get black;
+  Color get greenNephrite;
+}
