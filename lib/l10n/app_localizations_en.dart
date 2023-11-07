@@ -8,5 +8,5 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appName => 'App';
 
   @override
-  String get heyImMykyta => 'Hey EMOJI I\'m Mykyta.';
+  String get heyImMykyta => 'Hey 🔥 I\'m Mykyta.';
 }

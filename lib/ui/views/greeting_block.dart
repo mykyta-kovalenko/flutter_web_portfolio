@@ -63,16 +63,13 @@ class _MobileGreeting extends StatelessWidget {
       children: [
         _buildMenuRow(context),
         Text(context.strings.heyImMykyta),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(16),
-          child: Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.amber, width: 8),
-            ),
-            child: Image.asset(
-              Assets.img4102.path,
-              fit: BoxFit.cover,
-            ),
+        Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: const Color(0xFFefdf1a), width: 4),
+          ),
+          child: Image.asset(
+            Assets.img4102.path,
+            fit: BoxFit.cover,
           ),
         ),
       ],

@@ -7,5 +7,8 @@ class _LightColorThemeData implements AppColorThemeData {
   Color get black => _AppColors.black;
 
   @override
-  Color get greenNephrite => _AppColors.greenNephrite;
+  Color get mainYellow => _AppColors.mainYellow;
+
+  @override
+  Color get secondaryYellow => _AppColors.secondaryYellow;
 }

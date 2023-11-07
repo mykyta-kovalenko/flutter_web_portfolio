@@ -100,7 +100,7 @@ abstract class AppLocalizations {
   /// No description provided for @heyImMykyta.
   ///
   /// In en, this message translates to:
-  /// **'Hey EMOJI I\'m Mykyta.'**
+  /// **'Hey 🔥 I\'m Mykyta.'**
   String get heyImMykyta;
 }
 
