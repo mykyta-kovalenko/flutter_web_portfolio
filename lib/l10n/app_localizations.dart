@@ -102,6 +102,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hey 🔥 I\'m Mykyta.'**
   String get heyImMykyta;
+
+  /// No description provided for @aMobileEngineer.
+  ///
+  /// In en, this message translates to:
+  /// **'A mobile engineer with extensive experience in Flutter.'**
+  String get aMobileEngineer;
+
+  /// No description provided for @iBuildApps.
+  ///
+  /// In en, this message translates to:
+  /// **'I build outstanding cross-platform apps.'**
+  String get iBuildApps;
+
+  /// No description provided for @workingHours.
+  ///
+  /// In en, this message translates to:
+  /// **'4.1k+\nworking\nhours'**
+  String get workingHours;
+
+  /// No description provided for @commercialProjects.
+  ///
+  /// In en, this message translates to:
+  /// **'5+\ncommercial\nprojects'**
+  String get commercialProjects;
+
+  /// No description provided for @technologyStack.
+  ///
+  /// In en, this message translates to:
+  /// **'1\ntechnology\nstack'**
+  String get technologyStack;
+
+  /// No description provided for @getResume.
+  ///
+  /// In en, this message translates to:
+  /// **'get a resume!'**
+  String get getResume;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

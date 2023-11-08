@@ -15,13 +15,14 @@ class _LightTextThemeData implements AppTextThemeData {
       );
   @override
   TextStyle get mobileTitle => _textStyle.copyWith(
-        fontWeight: FontWeight.w700,
         fontSize: 24,
+        fontWeight: FontWeight.w800,
       );
 
   @override
   TextStyle get mobileSubtitle => _textStyle.copyWith(
-        fontSize: 14,
+        fontSize: 20,
+        fontWeight: FontWeight.w600,
       );
 
   @override

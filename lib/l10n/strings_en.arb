@@ -1,5 +1,11 @@
 {
     "@@locale": "en",
     "appName": "App",
-    "heyImMykyta": "Hey 🔥 I'm Mykyta."
+    "heyImMykyta": "Hey 🔥 I'm Mykyta.",
+    "aMobileEngineer": "A mobile engineer with extensive experience in Flutter.",
+    "iBuildApps": "I build outstanding cross-platform apps.",
+    "workingHours": "4.1k+\nworking\nhours",
+    "commercialProjects": "5+\ncommercial\nprojects",
+    "technologyStack": "1\ntechnology\nstack",
+    "getResume": "get a resume!"
 }

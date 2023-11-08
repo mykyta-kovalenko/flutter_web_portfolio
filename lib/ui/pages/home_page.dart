@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/ui/views/greeting_block.dart';
+import 'package:flutter_web_portfolio/utils/build_context_ext.dart';
 
 @RoutePage()
 class HomePage extends StatefulWidget {
@@ -30,9 +31,12 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Color(0xFFefc01a), Color(0xFFefdf1a)],
+          colors: [
+            context.colorTheme.mainYellow,
+            context.colorTheme.secondaryYellow,
+          ],
         ),
       ),
       child: Scaffold(
