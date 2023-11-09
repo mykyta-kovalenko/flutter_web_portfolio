@@ -1,19 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_portfolio/utils/build_context_ext.dart';
 
 import '../../gen/assets.gen.dart';
+import '../../utils/build_context_ext.dart';
 import 'nav_menu_item.dart';
 
-abstract class GreetingBlockMenuDelegate {
-  void onProjectsTap(BuildContext context);
-  void onAboutMeTap(BuildContext context);
-  void onContactTap(BuildContext context);
-}
-
 class GreetingBlock extends StatelessWidget {
-  final GreetingBlockMenuDelegate menuDelegate;
-
-  const GreetingBlock({super.key, required this.menuDelegate});
+  const GreetingBlock({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +13,7 @@ class GreetingBlock extends StatelessWidget {
       return const _NonMobileGreeting();
     }
 
-    return _MobileGreeting(menuDelegate: menuDelegate);
+    return const _MobileGreeting();
   }
 }
 
@@ -31,27 +23,25 @@ class _NonMobileGreeting extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mq = MediaQuery.of(context);
+    // final mq = MediaQuery.of(context);
 
     return const Placeholder();
   }
 }
 
 class _MobileGreeting extends StatelessWidget {
-  final GreetingBlockMenuDelegate menuDelegate;
-
-  const _MobileGreeting({required this.menuDelegate});
+  const _MobileGreeting();
 
   void showMenuPopup(BuildContext context) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
-        return Dialog(
+        return const Dialog(
           alignment: Alignment.topRight,
           backgroundColor: Colors.transparent,
-          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
           insetPadding: EdgeInsets.zero,
-          child: _MobileMenuPopup(menuDelegate: menuDelegate),
+          child: _MobileMenuPopup(),
         );
       },
     );
@@ -167,9 +157,7 @@ class _MobileGreeting extends StatelessWidget {
 
 //TODO: Extract to separate file.
 class _MobileMenuPopup extends StatelessWidget {
-  const _MobileMenuPopup({required this.menuDelegate});
-
-  final GreetingBlockMenuDelegate menuDelegate;
+  const _MobileMenuPopup();
 
   @override
   Widget build(BuildContext context) {
@@ -202,21 +190,18 @@ class _MobileMenuPopup extends StatelessWidget {
                   title: context.strings.appName,
                   onTap: () {
                     Navigator.of(context).pop();
-                    menuDelegate.onProjectsTap(context);
                   },
                 ),
                 NavMenuItem(
                   title: context.strings.appName,
                   onTap: () {
                     Navigator.of(context).pop();
-                    menuDelegate.onAboutMeTap(context);
                   },
                 ),
                 NavMenuItem(
                   title: context.strings.appName,
                   onTap: () {
                     Navigator.of(context).pop();
-                    menuDelegate.onContactTap(context);
                   },
                 ),
               ],

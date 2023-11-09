@@ -1,7 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_portfolio/ui/views/greeting_block.dart';
-import 'package:flutter_web_portfolio/utils/build_context_ext.dart';
+
+import '../../mock/projects.dart';
+import '../../services/projects_data_source_service.dart';
+import '../../utils/build_context_ext.dart';
+import '../views/greeting_block.dart';
+import '../views/project_block.dart';
 
 @RoutePage()
 class HomePage extends StatefulWidget {
@@ -11,21 +15,16 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage>
-    implements GreetingBlockMenuDelegate {
-  @override
-  void onAboutMeTap(BuildContext context) {
-    // TODO: implement onAboutMeTap
-  }
+class _HomePageState extends State<HomePage> {
+  late final ProjectsDataSourceService _projectsDataSource;
 
   @override
-  void onContactTap(BuildContext context) {
-    // TODO: implement onContactTap
-  }
-
-  @override
-  void onProjectsTap(BuildContext context) {
-    // TODO: implement onProjectsTap
+  void didChangeDependencies() {
+    _projectsDataSource = ProjectsDataSourceService(
+      context,
+      projects: getProjectsData(context),
+    );
+    super.didChangeDependencies();
   }
 
   @override
@@ -44,8 +43,13 @@ class _HomePageState extends State<HomePage>
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(16),
-            child: GreetingBlock(
-              menuDelegate: this,
+            child: ListView(
+              shrinkWrap: true,
+              children: [
+                const GreetingBlock(),
+                const SizedBox(height: 48),
+                ProjectsBlock(projects: _projectsDataSource),
+              ],
             ),
           ),
         ),

@@ -138,6 +138,198 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'get a resume!'**
   String get getResume;
+
+  /// No description provided for @projectsStatuses.
+  ///
+  /// In en, this message translates to:
+  /// **'Projects Statuses'**
+  String get projectsStatuses;
+
+  /// No description provided for @name.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get name;
+
+  /// No description provided for @platform.
+  ///
+  /// In en, this message translates to:
+  /// **'Platform'**
+  String get platform;
+
+  /// No description provided for @status.
+  ///
+  /// In en, this message translates to:
+  /// **'Status'**
+  String get status;
+
+  /// No description provided for @location.
+  ///
+  /// In en, this message translates to:
+  /// **'Location'**
+  String get location;
+
+  /// No description provided for @description.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get description;
+
+  /// No description provided for @liluPhotography.
+  ///
+  /// In en, this message translates to:
+  /// **'Lilu Photography'**
+  String get liluPhotography;
+
+  /// No description provided for @liluPhotographyDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A website for a photographer from Austin, TX.'**
+  String get liluPhotographyDescription;
+
+  /// No description provided for @uAustin.
+  ///
+  /// In en, this message translates to:
+  /// **'UAustin'**
+  String get uAustin;
+
+  /// No description provided for @uAustinDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Navigation-directory app for Ukrainian businesses in Austin, created on a volunteer basis.'**
+  String get uAustinDescription;
+
+  /// No description provided for @threeWella.
+  ///
+  /// In en, this message translates to:
+  /// **'3Wella'**
+  String get threeWella;
+
+  /// No description provided for @threeWellaDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A meditation tool that is inspired by the approach to meditation in Thailand'**
+  String get threeWellaDescription;
+
+  /// No description provided for @heisenbergCafeMenu.
+  ///
+  /// In en, this message translates to:
+  /// **'Heseinberg Cafe Menu'**
+  String get heisenbergCafeMenu;
+
+  /// No description provided for @heisenbergCafeMenuDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A website for a cafe\'s menu.'**
+  String get heisenbergCafeMenuDescription;
+
+  /// No description provided for @groovifi.
+  ///
+  /// In en, this message translates to:
+  /// **'Groovifi'**
+  String get groovifi;
+
+  /// No description provided for @groovifiDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A music playlist generator for Spotify users.'**
+  String get groovifiDescription;
+
+  /// No description provided for @jiq.
+  ///
+  /// In en, this message translates to:
+  /// **'Java Interview Questions'**
+  String get jiq;
+
+  /// No description provided for @jiqDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'An app that is designed to prepare people for technical interviews.'**
+  String get jiqDescription;
+
+  /// No description provided for @financeFlow.
+  ///
+  /// In en, this message translates to:
+  /// **'Finance Flow'**
+  String get financeFlow;
+
+  /// No description provided for @financeFlowDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'An app that helps users manage their personal finances.'**
+  String get financeFlowDescription;
+
+  /// No description provided for @iOS.
+  ///
+  /// In en, this message translates to:
+  /// **'iOS'**
+  String get iOS;
+
+  /// No description provided for @android.
+  ///
+  /// In en, this message translates to:
+  /// **'Android'**
+  String get android;
+
+  /// No description provided for @web.
+  ///
+  /// In en, this message translates to:
+  /// **'Web'**
+  String get web;
+
+  /// No description provided for @toBeReleased.
+  ///
+  /// In en, this message translates to:
+  /// **'To be released'**
+  String get toBeReleased;
+
+  /// No description provided for @onGoing.
+  ///
+  /// In en, this message translates to:
+  /// **'On going'**
+  String get onGoing;
+
+  /// No description provided for @completed.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed'**
+  String get completed;
+
+  /// No description provided for @paused.
+  ///
+  /// In en, this message translates to:
+  /// **'Paused'**
+  String get paused;
+
+  /// No description provided for @abandoned.
+  ///
+  /// In en, this message translates to:
+  /// **'Abandoned'**
+  String get abandoned;
+
+  /// No description provided for @theUnitedStates.
+  ///
+  /// In en, this message translates to:
+  /// **'The United States'**
+  String get theUnitedStates;
+
+  /// No description provided for @thailand.
+  ///
+  /// In en, this message translates to:
+  /// **'Thailand'**
+  String get thailand;
+
+  /// No description provided for @ukraine.
+  ///
+  /// In en, this message translates to:
+  /// **'Ukraine'**
+  String get ukraine;
+
+  /// No description provided for @israel.
+  ///
+  /// In en, this message translates to:
+  /// **'Israel'**
+  String get israel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
