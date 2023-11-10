@@ -43,6 +43,6 @@ class _LightTextThemeData implements AppTextThemeData {
 
   @override
   TextStyle get mobileBodyText => _textStyle.copyWith(
-        fontSize: 14,
+        fontSize: 16,
       );
 }

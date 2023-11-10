@@ -196,7 +196,7 @@ abstract class AppLocalizations {
   /// No description provided for @uAustinDescription.
   ///
   /// In en, this message translates to:
-  /// **'Navigation-directory app for Ukrainian businesses in Austin, created on a volunteer basis.'**
+  /// **'Navigation-directory app for Ukrainian businesses in Austin, TX. Created on a volunteer basis.'**
   String get uAustinDescription;
 
   /// No description provided for @threeWella.
@@ -330,6 +330,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Israel'**
   String get israel;
+
+  /// No description provided for @dataGridDoesntInclude.
+  ///
+  /// In en, this message translates to:
+  /// **'* the data grid doesn\'t include projects under NDA.'**
+  String get dataGridDoesntInclude;
+
+  /// No description provided for @total.
+  ///
+  /// In en, this message translates to:
+  /// **'Total'**
+  String get total;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

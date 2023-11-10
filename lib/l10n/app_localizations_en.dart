@@ -56,7 +56,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get uAustin => 'UAustin';
 
   @override
-  String get uAustinDescription => 'Navigation-directory app for Ukrainian businesses in Austin, created on a volunteer basis.';
+  String get uAustinDescription => 'Navigation-directory app for Ukrainian businesses in Austin, TX. Created on a volunteer basis.';
 
   @override
   String get threeWella => '3Wella';
@@ -123,4 +123,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get israel => 'Israel';
+
+  @override
+  String get dataGridDoesntInclude => '* the data grid doesn\'t include projects under NDA.';
+
+  @override
+  String get total => 'Total';
 }

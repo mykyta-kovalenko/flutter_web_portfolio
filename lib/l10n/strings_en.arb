@@ -17,7 +17,7 @@
     "liluPhotography": "Lilu Photography",
     "liluPhotographyDescription": "A website for a photographer from Austin, TX.",
     "uAustin": "UAustin",
-    "uAustinDescription": "Navigation-directory app for Ukrainian businesses in Austin, created on a volunteer basis.",
+    "uAustinDescription": "Navigation-directory app for Ukrainian businesses in Austin, TX. Created on a volunteer basis.",
     "threeWella": "3Wella",
     "threeWellaDescription": "A meditation tool that is inspired by the approach to meditation in Thailand",
     "heisenbergCafeMenu": "Heseinberg Cafe Menu",
@@ -39,5 +39,7 @@
     "theUnitedStates": "The United States",
     "thailand": "Thailand",
     "ukraine": "Ukraine",
-    "israel": "Israel"
+    "israel": "Israel",
+    "dataGridDoesntInclude": "* the data grid doesn't include projects under NDA.",
+    "total": "Total"
 }

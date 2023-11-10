@@ -5,7 +5,7 @@ import '../../mock/projects.dart';
 import '../../services/projects_data_source_service.dart';
 import '../../utils/build_context_ext.dart';
 import '../views/greeting_block.dart';
-import '../views/project_block.dart';
+import '../views/projects_block.dart';
 
 @RoutePage()
 class HomePage extends StatefulWidget {
