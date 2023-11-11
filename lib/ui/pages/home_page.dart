@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../mock/projects.dart';
 import '../../services/projects_data_source_service.dart';
 import '../../utils/build_context_ext.dart';
+import '../views/contact_block.dart';
 import '../views/greeting_block.dart';
 import '../views/projects_block.dart';
 import '../views/references_block.dart';
@@ -51,6 +52,9 @@ class _HomePageState extends State<HomePage> {
               ProjectsBlock(projects: _projectsDataSource),
               const SizedBox(height: 48),
               const ReferencesBlock(),
+              const SizedBox(height: 48),
+              const ContactBlock(),
+              const SizedBox(height: 48),
             ],
           ),
         ),

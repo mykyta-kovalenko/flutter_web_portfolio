@@ -14,6 +14,7 @@ dependencies:
   intl: ^0.18.1
   equatable: ^2.0.5
   auto_route: ^7.8.4
+  flutter_svg: ^2.0.9
   responsive_framework: ^1.1.1
   syncfusion_flutter_core: ^23.1.44
   syncfusion_flutter_datagrid: ^23.1.44
@@ -31,3 +32,4 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/icons/

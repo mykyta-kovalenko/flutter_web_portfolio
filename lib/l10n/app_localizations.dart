@@ -414,6 +414,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Oleksii Bykov, UI/UX Designer'**
   String get oleksiiBykov;
+
+  /// No description provided for @getInTouch.
+  ///
+  /// In en, this message translates to:
+  /// **'Do you wanna get in touch?'**
+  String get getInTouch;
+
+  /// No description provided for @letsChat.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s chat!'**
+  String get letsChat;
+
+  /// No description provided for @dropMeEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'or drop me an email at\nmykyta.kovalenko24@gmail.com'**
+  String get dropMeEmail;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -165,4 +165,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get oleksiiBykov => 'Oleksii Bykov, UI/UX Designer';
+
+  @override
+  String get getInTouch => 'Do you wanna get in touch?';
+
+  @override
+  String get letsChat => 'Let\'s chat!';
+
+  @override
+  String get dropMeEmail => 'or drop me an email at\nmykyta.kovalenko24@gmail.com';
 }
