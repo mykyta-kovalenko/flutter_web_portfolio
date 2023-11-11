@@ -142,7 +142,7 @@ abstract class AppLocalizations {
   /// No description provided for @projectsStatuses.
   ///
   /// In en, this message translates to:
-  /// **'Projects Statuses'**
+  /// **'Projects Statuses.'**
   String get projectsStatuses;
 
   /// No description provided for @name.
@@ -342,6 +342,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Total'**
   String get total;
+
+  /// No description provided for @apparentlyMyColleagues.
+  ///
+  /// In en, this message translates to:
+  /// **'Apparently, my colleagues love to work with me!'**
+  String get apparentlyMyColleagues;
+
+  /// No description provided for @bogdanReference.
+  ///
+  /// In en, this message translates to:
+  /// **'\"Mykyta has an impressive understanding of Flutter and Dart. His expertise has been invaluable in creating high-quality and robust applications. In addition to his technical skills, Mykyta is also an excellent communicator. He is always willing to lend a helping hand and is patient in answering any questions or concerns.\"'**
+  String get bogdanReference;
+
+  /// No description provided for @bogdanAksonenko.
+  ///
+  /// In en, this message translates to:
+  /// **'Bogdan Aksonenko, CEO'**
+  String get bogdanAksonenko;
+
+  /// No description provided for @proAreaDigitalAgency.
+  ///
+  /// In en, this message translates to:
+  /// **'ProArea Digital Agency'**
+  String get proAreaDigitalAgency;
+
+  /// No description provided for @yaroslavReference.
+  ///
+  /// In en, this message translates to:
+  /// **'\"Without a doubt Mykyta is a great specialist, one of the best team players I have ever worked with. He can quickly adapt to new challenges, knows how to find an approach to a client, as well as excellent and fast learner of new skills. I had the fortune to work with Mykyta on several successful projects. He always showed his ability not only to complete tasks but also to solve problems on projects and propose great solutions.\"'**
+  String get yaroslavReference;
+
+  /// No description provided for @yaroslavSerdiuchenko.
+  ///
+  /// In en, this message translates to:
+  /// **'Yaroslav Serdiuchenko, Project Manager'**
+  String get yaroslavSerdiuchenko;
+
+  /// No description provided for @lineUp.
+  ///
+  /// In en, this message translates to:
+  /// **'LineUp'**
+  String get lineUp;
+
+  /// No description provided for @anastasiiaReference.
+  ///
+  /// In en, this message translates to:
+  /// **'\"Desire for proficiency and education makes Mykyta a valuable asset to the team. His work is always top-notch, and he is always welcoming to feedback and making improvements. Working with Mykyta has been a great experience for me as I learned many soft skills from him. Highly recommended.\"'**
+  String get anastasiiaReference;
+
+  /// No description provided for @anastasiiaChervinska.
+  ///
+  /// In en, this message translates to:
+  /// **'Anastasiia Chervinska, Flutter Developer'**
+  String get anastasiiaChervinska;
+
+  /// No description provided for @einDesEin.
+  ///
+  /// In en, this message translates to:
+  /// **'ein-des-ein'**
+  String get einDesEin;
+
+  /// No description provided for @oleksiiReference.
+  ///
+  /// In en, this message translates to:
+  /// **'\"Mykyta is able to work with people, think critically, adapt and learn quickly, and does his job with a deep focus on the task at hand. One of the advantages of working with Mykyta is his ability to quickly find and offer a solution to a problem on a project.\"'**
+  String get oleksiiReference;
+
+  /// No description provided for @oleksiiBykov.
+  ///
+  /// In en, this message translates to:
+  /// **'Oleksii Bykov, UI/UX Designer'**
+  String get oleksiiBykov;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

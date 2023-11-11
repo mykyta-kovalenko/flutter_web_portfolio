@@ -29,7 +29,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get getResume => 'get a resume!';
 
   @override
-  String get projectsStatuses => 'Projects Statuses';
+  String get projectsStatuses => 'Projects Statuses.';
 
   @override
   String get name => 'Name';
@@ -129,4 +129,40 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get total => 'Total';
+
+  @override
+  String get apparentlyMyColleagues => 'Apparently, my colleagues love to work with me!';
+
+  @override
+  String get bogdanReference => '\"Mykyta has an impressive understanding of Flutter and Dart. His expertise has been invaluable in creating high-quality and robust applications. In addition to his technical skills, Mykyta is also an excellent communicator. He is always willing to lend a helping hand and is patient in answering any questions or concerns.\"';
+
+  @override
+  String get bogdanAksonenko => 'Bogdan Aksonenko, CEO';
+
+  @override
+  String get proAreaDigitalAgency => 'ProArea Digital Agency';
+
+  @override
+  String get yaroslavReference => '\"Without a doubt Mykyta is a great specialist, one of the best team players I have ever worked with. He can quickly adapt to new challenges, knows how to find an approach to a client, as well as excellent and fast learner of new skills. I had the fortune to work with Mykyta on several successful projects. He always showed his ability not only to complete tasks but also to solve problems on projects and propose great solutions.\"';
+
+  @override
+  String get yaroslavSerdiuchenko => 'Yaroslav Serdiuchenko, Project Manager';
+
+  @override
+  String get lineUp => 'LineUp';
+
+  @override
+  String get anastasiiaReference => '\"Desire for proficiency and education makes Mykyta a valuable asset to the team. His work is always top-notch, and he is always welcoming to feedback and making improvements. Working with Mykyta has been a great experience for me as I learned many soft skills from him. Highly recommended.\"';
+
+  @override
+  String get anastasiiaChervinska => 'Anastasiia Chervinska, Flutter Developer';
+
+  @override
+  String get einDesEin => 'ein-des-ein';
+
+  @override
+  String get oleksiiReference => '\"Mykyta is able to work with people, think critically, adapt and learn quickly, and does his job with a deep focus on the task at hand. One of the advantages of working with Mykyta is his ability to quickly find and offer a solution to a problem on a project.\"';
+
+  @override
+  String get oleksiiBykov => 'Oleksii Bykov, UI/UX Designer';
 }

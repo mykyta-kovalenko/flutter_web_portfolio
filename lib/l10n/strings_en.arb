@@ -8,7 +8,7 @@
     "commercialProjects": "5+\ncommercial\nprojects",
     "technologyStack": "1\ntechnology\nstack",
     "getResume": "get a resume!",
-    "projectsStatuses": "Projects Statuses",
+    "projectsStatuses": "Projects Statuses.",
     "name": "Name",
     "platform": "Platform",
     "status": "Status",
@@ -41,5 +41,17 @@
     "ukraine": "Ukraine",
     "israel": "Israel",
     "dataGridDoesntInclude": "* the data grid doesn't include projects under NDA.",
-    "total": "Total"
+    "total": "Total",
+    "apparentlyMyColleagues": "Apparently, my colleagues love to work with me!",
+    "bogdanReference": "\"Mykyta has an impressive understanding of Flutter and Dart. His expertise has been invaluable in creating high-quality and robust applications. In addition to his technical skills, Mykyta is also an excellent communicator. He is always willing to lend a helping hand and is patient in answering any questions or concerns.\"",
+    "bogdanAksonenko": "Bogdan Aksonenko, CEO",
+    "proAreaDigitalAgency": "ProArea Digital Agency",
+    "yaroslavReference": "\"Without a doubt Mykyta is a great specialist, one of the best team players I have ever worked with. He can quickly adapt to new challenges, knows how to find an approach to a client, as well as excellent and fast learner of new skills. I had the fortune to work with Mykyta on several successful projects. He always showed his ability not only to complete tasks but also to solve problems on projects and propose great solutions.\"",
+    "yaroslavSerdiuchenko": "Yaroslav Serdiuchenko, Project Manager",
+    "lineUp": "LineUp",
+    "anastasiiaReference": "\"Desire for proficiency and education makes Mykyta a valuable asset to the team. His work is always top-notch, and he is always welcoming to feedback and making improvements. Working with Mykyta has been a great experience for me as I learned many soft skills from him. Highly recommended.\"",
+    "anastasiiaChervinska": "Anastasiia Chervinska, Flutter Developer",
+    "einDesEin": "ein-des-ein",
+    "oleksiiReference": "\"Mykyta is able to work with people, think critically, adapt and learn quickly, and does his job with a deep focus on the task at hand. One of the advantages of working with Mykyta is his ability to quickly find and offer a solution to a problem on a project.\"",
+    "oleksiiBykov": "Oleksii Bykov, UI/UX Designer"
 }

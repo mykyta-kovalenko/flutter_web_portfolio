@@ -6,6 +6,7 @@ import '../../services/projects_data_source_service.dart';
 import '../../utils/build_context_ext.dart';
 import '../views/greeting_block.dart';
 import '../views/projects_block.dart';
+import '../views/references_block.dart';
 
 @RoutePage()
 class HomePage extends StatefulWidget {
@@ -40,17 +41,17 @@ class _HomePageState extends State<HomePage> {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: ListView(
-              shrinkWrap: true,
-              children: [
-                const GreetingBlock(),
-                const SizedBox(height: 48),
-                ProjectsBlock(projects: _projectsDataSource),
-              ],
-            ),
+        body: Padding(
+          padding: const EdgeInsets.all(16),
+          child: ListView(
+            shrinkWrap: true,
+            children: [
+              const GreetingBlock(),
+              const SizedBox(height: 48),
+              ProjectsBlock(projects: _projectsDataSource),
+              const SizedBox(height: 48),
+              const ReferencesBlock(),
+            ],
           ),
         ),
       ),

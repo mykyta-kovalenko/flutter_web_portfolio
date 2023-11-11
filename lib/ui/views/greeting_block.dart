@@ -81,7 +81,7 @@ class _MobileGreeting extends StatelessWidget {
             border: Border.all(color: const Color(0xFFefdf1a), width: 4),
           ),
           child: Image.asset(
-            Assets.img4102.path,
+            Assets.images.img4102.path,
             fit: BoxFit.cover,
           ),
         ),
