@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../gen/assets.gen.dart';
 import '../../utils/build_context_ext.dart';
+import 'buttons/app_button.dart';
+import 'buttons/app_text_button.dart';
 
 class ContactBlock extends StatelessWidget {
   const ContactBlock({super.key});
@@ -22,19 +24,25 @@ class ContactBlock extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 20),
-        ElevatedButton(
+        AppButton(
           onPressed: () {},
-          style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.all(16),
-            textStyle: context.textTheme.mobileSubtitle,
-            backgroundColor: context.colorTheme.black.withOpacity(.6),
-          ),
-          child: Text(context.strings.letsChat.toUpperCase()),
+          title: context.strings.letsChat,
         ),
         const SizedBox(height: 20),
         Text(
-          context.strings.dropMeEmail,
+          context.strings.dropMeEmailAt,
           textAlign: TextAlign.center,
+          style: isDesktop
+              ? context.textTheme.mainBodyText.copyWith(
+                  fontWeight: FontWeight.bold,
+                )
+              : context.textTheme.mobileBodyText.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+        ),
+        AppTextButton(
+          onTap: () {},
+          title: context.strings.email,
           style: isDesktop
               ? context.textTheme.mainBodyText.copyWith(
                   fontWeight: FontWeight.bold,

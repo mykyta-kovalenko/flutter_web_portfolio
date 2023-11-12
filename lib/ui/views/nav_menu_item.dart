@@ -20,9 +20,9 @@ class NavMenuItem extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
         child: Text(
           title,
-          style: !context.isDesktop
-              ? context.textTheme.mobileSubtitle
-              : context.textTheme.mainSubtitle,
+          style: context.isDesktop
+              ? context.textTheme.mainBodyText
+              : context.textTheme.mobileSubtitle,
         ),
       ),
     );

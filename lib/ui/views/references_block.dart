@@ -1,13 +1,74 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import '../../gen/assets.gen.dart';
 import '../../utils/build_context_ext.dart';
+import 'buttons/app_text_button.dart';
 
 class ReferencesBlock extends StatelessWidget {
   const ReferencesBlock({super.key});
 
   @override
   Widget build(BuildContext context) {
+    if (context.isDesktop) {
+      return _buildNonMobileReferences(context);
+    }
+    return _buildMobileReferences(context);
+  }
+
+  Widget _buildNonMobileReferences(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          context.strings.apparentlyMyColleagues,
+          style: context.isDesktop
+              ? context.textTheme.mainTitle
+              : context.textTheme.mobileTitle,
+        ),
+        const SizedBox(height: 20),
+        StaggeredGrid.count(
+          crossAxisCount: 2,
+          crossAxisSpacing: 12,
+          children: [
+            _buildReferenceCard(
+              context,
+              reference: context.strings.bogdanReference,
+              imagePath: Assets.images.bogdan.path,
+              name: context.strings.bogdanAksonenko,
+              company: context.strings.proAreaDigitalAgency,
+            ),
+            const SizedBox(height: 20),
+            _buildReferenceCard(
+              context,
+              reference: context.strings.yaroslavReference,
+              imagePath: Assets.images.yaroslav.path,
+              name: context.strings.yaroslavSerdiuchenko,
+              company: context.strings.lineUp,
+            ),
+            const SizedBox(height: 20),
+            _buildReferenceCard(
+              context,
+              reference: context.strings.anastasiiaReference,
+              imagePath: Assets.images.anastasiia.path,
+              name: context.strings.anastasiiaChervinska,
+              company: context.strings.einDesEin,
+            ),
+            const SizedBox(height: 20),
+            _buildReferenceCard(
+              context,
+              reference: context.strings.oleksiiReference,
+              imagePath: Assets.images.oleksii.path,
+              name: context.strings.oleksiiBykov,
+              company: context.strings.lineUp,
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget _buildMobileReferences(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -69,7 +130,9 @@ class ReferencesBlock extends StatelessWidget {
           children: [
             Text(
               reference,
-              style: context.textTheme.mobileBodyText,
+              style: isDesktop
+                  ? context.textTheme.mainBodyText
+                  : context.textTheme.mobileBodyText,
             ),
             const SizedBox(height: 16),
             Row(
@@ -104,8 +167,9 @@ class ReferencesBlock extends StatelessWidget {
                             : context.textTheme.mobileSubtitle,
                       ),
                       const SizedBox(height: 4),
-                      Text(
-                        company,
+                      AppTextButton(
+                        onTap: () {},
+                        title: company,
                         style: isDesktop
                             ? context.textTheme.mainBodyText
                             : context.textTheme.mobileBodyText,

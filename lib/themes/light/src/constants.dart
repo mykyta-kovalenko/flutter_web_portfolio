@@ -9,5 +9,6 @@ const _textStyle = TextStyle(
 abstract class _AppColors {
   static const black = Color(0xFF181818);
   static const mainYellow = Color(0xFFEFC01A);
+  static const textButtonRed = Color(0xFFF44336);
   static const secondaryYellow = Color(0xFFEFDF1A);
 }

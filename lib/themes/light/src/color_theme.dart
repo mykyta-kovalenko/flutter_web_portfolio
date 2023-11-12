@@ -11,4 +11,7 @@ class _LightColorThemeData implements AppColorThemeData {
 
   @override
   Color get secondaryYellow => _AppColors.secondaryYellow;
+
+  @override
+  Color get textButtonRed => _AppColors.textButtonRed;
 }

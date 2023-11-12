@@ -427,11 +427,41 @@ abstract class AppLocalizations {
   /// **'Let\'s chat!'**
   String get letsChat;
 
-  /// No description provided for @dropMeEmail.
+  /// No description provided for @dropMeEmailAt.
   ///
   /// In en, this message translates to:
-  /// **'or drop me an email at\nmykyta.kovalenko24@gmail.com'**
-  String get dropMeEmail;
+  /// **'or drop me an email at'**
+  String get dropMeEmailAt;
+
+  /// No description provided for @email.
+  ///
+  /// In en, this message translates to:
+  /// **'mykyta.kovalenko24@gmail.com'**
+  String get email;
+
+  /// No description provided for @projectsOverview.
+  ///
+  /// In en, this message translates to:
+  /// **'Projects Overview'**
+  String get projectsOverview;
+
+  /// No description provided for @projectsStructure.
+  ///
+  /// In en, this message translates to:
+  /// **'Projects Structure'**
+  String get projectsStructure;
+
+  /// No description provided for @resources.
+  ///
+  /// In en, this message translates to:
+  /// **'Resources'**
+  String get resources;
+
+  /// No description provided for @mK.
+  ///
+  /// In en, this message translates to:
+  /// **'MK'**
+  String get mK;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

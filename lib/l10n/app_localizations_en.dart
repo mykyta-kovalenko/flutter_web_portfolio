@@ -173,5 +173,20 @@ class AppLocalizationsEn extends AppLocalizations {
   String get letsChat => 'Let\'s chat!';
 
   @override
-  String get dropMeEmail => 'or drop me an email at\nmykyta.kovalenko24@gmail.com';
+  String get dropMeEmailAt => 'or drop me an email at';
+
+  @override
+  String get email => 'mykyta.kovalenko24@gmail.com';
+
+  @override
+  String get projectsOverview => 'Projects Overview';
+
+  @override
+  String get projectsStructure => 'Projects Structure';
+
+  @override
+  String get resources => 'Resources';
+
+  @override
+  String get mK => 'MK';
 }

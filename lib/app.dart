@@ -15,15 +15,18 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppTheme(
       theme: LightThemeData(),
-      child: MaterialApp.router(
-        routerConfig: appRouter.config(),
-        debugShowCheckedModeBanner: false,
-        supportedLocales: AppLocalizations.supportedLocales,
-        onGenerateTitle: (context) => context.strings.appName,
-        localizationsDelegates: AppLocalizations.localizationsDelegates,
-        scrollBehavior: const ScrollBehavior().copyWith(overscroll: false),
-        builder: _buildApp,
-      ),
+      child: Builder(builder: (context) {
+        return MaterialApp.router(
+          routerConfig: appRouter.config(),
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme.of(context).themeData,
+          supportedLocales: AppLocalizations.supportedLocales,
+          onGenerateTitle: (context) => context.strings.appName,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          scrollBehavior: const ScrollBehavior().copyWith(overscroll: false),
+          builder: _buildApp,
+        );
+      }),
     );
   }
 

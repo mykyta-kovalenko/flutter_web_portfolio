@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    var desktopSizing = MediaQuery.of(context).size.width * 0.05;
+    var desktopSizing = MediaQuery.of(context).size.width * 0.2;
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -65,22 +65,24 @@ class _HomePageState extends State<HomePage> {
               if (context.isDesktop) ...{
                 _buildNonMobileAppBar(context, desktopSizing),
               },
-              ListView(
-                padding: EdgeInsets.all(
-                  context.isDesktop ? desktopSizing : 20,
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 20,
+                  horizontal: context.isDesktop ? desktopSizing : 20,
                 ),
-                shrinkWrap: true,
-                children: [
-                  if (!context.isDesktop) _buildMobileAppBar(context),
-                  const GreetingBlock(),
-                  SizedBox(height: context.isDesktop ? desktopSizing : 48),
-                  ProjectsBlock(projects: _projectsDataSource),
-                  SizedBox(height: context.isDesktop ? desktopSizing : 48),
-                  const ReferencesBlock(),
-                  SizedBox(height: context.isDesktop ? desktopSizing : 48),
-                  const ContactBlock(),
-                  SizedBox(height: context.isDesktop ? desktopSizing : 48),
-                ],
+                child: Column(
+                  children: [
+                    if (!context.isDesktop) _buildMobileAppBar(context),
+                    const GreetingBlock(),
+                    SizedBox(height: context.isDesktop ? 120 : 48),
+                    ProjectsBlock(projects: _projectsDataSource),
+                    SizedBox(height: context.isDesktop ? 120 : 48),
+                    const ReferencesBlock(),
+                    SizedBox(height: context.isDesktop ? 120 : 48),
+                    const ContactBlock(),
+                    SizedBox(height: context.isDesktop ? 120 : 48),
+                  ],
+                ),
               ),
             ],
           ),
@@ -89,36 +91,26 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _buildNonMobileAppBar(
-    BuildContext context,
-    double desktopSizing,
-  ) {
+  Widget _buildNonMobileAppBar(BuildContext context, double desktopSizing) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-        vertical: 24,
-        horizontal: desktopSizing,
-      ),
+      padding: EdgeInsets.symmetric(vertical: 24, horizontal: desktopSizing),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Text(
-            'MK',
+            context.strings.mK,
             style: context.textTheme.mainTitle,
           ),
           const SizedBox(width: 36),
-          Text(
-            'Projects Overview',
-            style: context.textTheme.mainSubtitle,
+          Flexible(
+            child: NavMenuItem(title: context.strings.projectsOverview),
           ),
           const SizedBox(width: 36),
-          Text(
-            'Projects Structure',
-            style: context.textTheme.mainSubtitle,
+          Flexible(
+            child: NavMenuItem(title: context.strings.projectsStructure),
           ),
           const SizedBox(width: 36),
-          Text(
-            'Resources',
-            style: context.textTheme.mainSubtitle,
+          Flexible(
+            child: NavMenuItem(title: context.strings.resources),
           ),
         ],
       ),
@@ -130,9 +122,9 @@ class _HomePageState extends State<HomePage> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          'MK',
-          style: TextStyle(fontSize: 40),
+        Text(
+          context.strings.mK,
+          style: const TextStyle(fontSize: 40),
         ),
         IconButton(
           icon: const Icon(Icons.menu),
