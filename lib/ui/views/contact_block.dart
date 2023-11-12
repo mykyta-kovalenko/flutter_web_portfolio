@@ -1,13 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../gen/assets.gen.dart';
 import '../../utils/build_context_ext.dart';
 import 'buttons/app_button.dart';
+import 'buttons/app_icon_button.dart';
 import 'buttons/app_text_button.dart';
 
 class ContactBlock extends StatelessWidget {
   const ContactBlock({super.key});
+
+  void _onLinkedInTap(BuildContext context) {
+    launchUrlString(context.strings.urlLinkedIn);
+  }
+
+  void _onGitHubTap(BuildContext context) {
+    launchUrlString(context.strings.urlGitHub);
+  }
+
+  void _onInstagramTap(BuildContext context) {
+    launchUrlString(context.strings.urlInstagram);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,31 +65,28 @@ class ContactBlock extends StatelessWidget {
                 ),
         ),
         const SizedBox(height: 20),
-        _buildSocialMediaLinks(),
+        _buildSocialMediaLinks(context),
       ],
     );
   }
 
-  Widget _buildSocialMediaLinks() {
+  Widget _buildSocialMediaLinks(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SvgPicture.asset(
+        AppIconButton(
+          () => _onLinkedInTap(context),
           Assets.icons.icons8Linkedin,
-          width: 36,
-          height: 36,
         ),
         const SizedBox(width: 12),
-        SvgPicture.asset(
+        AppIconButton(
+          () => _onGitHubTap(context),
           Assets.icons.icons8Github,
-          width: 36,
-          height: 36,
         ),
         const SizedBox(width: 12),
-        SvgPicture.asset(
+        AppIconButton(
+          () => _onInstagramTap(context),
           Assets.icons.icons8Instagram,
-          width: 36,
-          height: 36,
         ),
       ],
     );

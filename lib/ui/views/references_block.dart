@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../gen/assets.gen.dart';
 import '../../utils/build_context_ext.dart';
@@ -37,6 +38,7 @@ class ReferencesBlock extends StatelessWidget {
               imagePath: Assets.images.bogdan.path,
               name: context.strings.bogdanAksonenko,
               company: context.strings.proAreaDigitalAgency,
+              companyUrl: context.strings.urlProArea,
             ),
             const SizedBox(height: 20),
             _buildReferenceCard(
@@ -45,6 +47,7 @@ class ReferencesBlock extends StatelessWidget {
               imagePath: Assets.images.yaroslav.path,
               name: context.strings.yaroslavSerdiuchenko,
               company: context.strings.lineUp,
+              companyUrl: context.strings.urlLineUp,
             ),
             const SizedBox(height: 20),
             _buildReferenceCard(
@@ -53,6 +56,7 @@ class ReferencesBlock extends StatelessWidget {
               imagePath: Assets.images.anastasiia.path,
               name: context.strings.anastasiiaChervinska,
               company: context.strings.einDesEin,
+              companyUrl: context.strings.urlEinDesEin,
             ),
             const SizedBox(height: 20),
             _buildReferenceCard(
@@ -61,6 +65,7 @@ class ReferencesBlock extends StatelessWidget {
               imagePath: Assets.images.oleksii.path,
               name: context.strings.oleksiiBykov,
               company: context.strings.lineUp,
+              companyUrl: context.strings.urlLineUp,
             ),
           ],
         ),
@@ -85,6 +90,7 @@ class ReferencesBlock extends StatelessWidget {
           imagePath: Assets.images.bogdan.path,
           name: context.strings.bogdanAksonenko,
           company: context.strings.proAreaDigitalAgency,
+          companyUrl: context.strings.urlProArea,
         ),
         const SizedBox(height: 20),
         _buildReferenceCard(
@@ -93,6 +99,7 @@ class ReferencesBlock extends StatelessWidget {
           imagePath: Assets.images.yaroslav.path,
           name: context.strings.yaroslavSerdiuchenko,
           company: context.strings.lineUp,
+          companyUrl: context.strings.urlLineUp,
         ),
         const SizedBox(height: 20),
         _buildReferenceCard(
@@ -101,6 +108,7 @@ class ReferencesBlock extends StatelessWidget {
           imagePath: Assets.images.anastasiia.path,
           name: context.strings.anastasiiaChervinska,
           company: context.strings.einDesEin,
+          companyUrl: context.strings.urlEinDesEin,
         ),
         const SizedBox(height: 20),
         _buildReferenceCard(
@@ -109,6 +117,7 @@ class ReferencesBlock extends StatelessWidget {
           imagePath: Assets.images.oleksii.path,
           name: context.strings.oleksiiBykov,
           company: context.strings.lineUp,
+          companyUrl: context.strings.urlLineUp,
         ),
       ],
     );
@@ -120,6 +129,7 @@ class ReferencesBlock extends StatelessWidget {
     required String imagePath,
     required String name,
     required String company,
+    required String companyUrl,
   }) {
     final isDesktop = context.isDesktop;
     return Container(
@@ -135,53 +145,71 @@ class ReferencesBlock extends StatelessWidget {
                   : context.textTheme.mobileBodyText,
             ),
             const SizedBox(height: 16),
-            Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      width: 2,
-                      color: context.colorTheme.secondaryYellow,
-                    ),
-                    shape: BoxShape.circle,
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(48),
-                    child: Image.asset(
-                      imagePath,
-                      width: 64,
-                      height: 64,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        name,
-                        style: isDesktop
-                            ? context.textTheme.mainSubtitle
-                            : context.textTheme.mobileSubtitle,
-                      ),
-                      const SizedBox(height: 4),
-                      AppTextButton(
-                        onTap: () {},
-                        title: company,
-                        style: isDesktop
-                            ? context.textTheme.mainBodyText
-                            : context.textTheme.mobileBodyText,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            )
+            _buildColleagueTile(
+              context,
+              isDesktop,
+              name: name,
+              imagePath: imagePath,
+              company: company,
+              companyUrl: companyUrl,
+            ),
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildColleagueTile(
+    BuildContext context,
+    bool isDesktop, {
+    required String name,
+    required String imagePath,
+    required String company,
+    required String companyUrl,
+  }) {
+    return Row(
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              width: 2,
+              color: context.colorTheme.secondaryYellow,
+            ),
+            shape: BoxShape.circle,
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(48),
+            child: Image.asset(
+              imagePath,
+              width: 64,
+              height: 64,
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                name,
+                style: isDesktop
+                    ? context.textTheme.mainSubtitle
+                    : context.textTheme.mobileSubtitle,
+              ),
+              const SizedBox(height: 4),
+              AppTextButton(
+                onTap: () => launchUrlString(companyUrl),
+                title: company,
+                style: isDesktop
+                    ? context.textTheme.mainBodyText
+                    : context.textTheme.mobileBodyText,
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

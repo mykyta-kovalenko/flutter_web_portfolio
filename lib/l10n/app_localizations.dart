@@ -462,6 +462,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'MK'**
   String get mK;
+
+  /// No description provided for @urlLinkedIn.
+  ///
+  /// In en, this message translates to:
+  /// **'https://www.linkedin.com/in/mykyta-kovalenko232/'**
+  String get urlLinkedIn;
+
+  /// No description provided for @urlGitHub.
+  ///
+  /// In en, this message translates to:
+  /// **'https://github.com/mykyta-kovalenko'**
+  String get urlGitHub;
+
+  /// No description provided for @urlInstagram.
+  ///
+  /// In en, this message translates to:
+  /// **'https://www.instagram.com/keyofvictory/'**
+  String get urlInstagram;
+
+  /// No description provided for @urlProArea.
+  ///
+  /// In en, this message translates to:
+  /// **'https://proarea.com/'**
+  String get urlProArea;
+
+  /// No description provided for @urlEinDesEin.
+  ///
+  /// In en, this message translates to:
+  /// **'https://ein-des-ein.com/'**
+  String get urlEinDesEin;
+
+  /// No description provided for @urlLineUp.
+  ///
+  /// In en, this message translates to:
+  /// **'https://lineup.ua/'**
+  String get urlLineUp;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

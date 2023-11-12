@@ -189,4 +189,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mK => 'MK';
+
+  @override
+  String get urlLinkedIn => 'https://www.linkedin.com/in/mykyta-kovalenko232/';
+
+  @override
+  String get urlGitHub => 'https://github.com/mykyta-kovalenko';
+
+  @override
+  String get urlInstagram => 'https://www.instagram.com/keyofvictory/';
+
+  @override
+  String get urlProArea => 'https://proarea.com/';
+
+  @override
+  String get urlEinDesEin => 'https://ein-des-ein.com/';
+
+  @override
+  String get urlLineUp => 'https://lineup.ua/';
 }
