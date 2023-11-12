@@ -14,5 +14,12 @@ extension AppThemeBuildContextExt on BuildContext {
 }
 
 extension AppLayoutBuildContextExt on BuildContext {
-  ResponsiveBreakpointsData get breakpoint => ResponsiveBreakpoints.of(this);
+  ResponsiveBreakpointsData get _data {
+    final data = ResponsiveBreakpoints.of(this);
+    return data;
+  }
+
+  bool get isMobile => _data.isMobile;
+  bool get isTablet => _data.isTablet;
+  bool get isDesktop => _data.isDesktop;
 }

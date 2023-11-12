@@ -11,12 +11,15 @@ class ProjectsBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDesktop = context.isDesktop;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           context.strings.projectsStatuses,
-          style: context.textTheme.mobileTitle,
+          style: isDesktop
+              ? context.textTheme.mainTitle
+              : context.textTheme.mobileTitle,
         ),
         const SizedBox(height: 20),
         _buildDataGrid(context),
@@ -25,7 +28,9 @@ class ProjectsBlock extends StatelessWidget {
           children: [
             Text(
               '${context.strings.total}: ${projects.rows.length}',
-              style: context.textTheme.mobileBodyText,
+              style: isDesktop
+                  ? context.textTheme.mobileBodyText
+                  : context.textTheme.mainBodyText,
             ),
             Text(
               context.strings.dataGridDoesntInclude,

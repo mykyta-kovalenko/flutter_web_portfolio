@@ -9,13 +9,16 @@ class ContactBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDesktop = context.isDesktop;
     return Column(
       children: [
         Align(
-          alignment: Alignment.centerLeft,
+          alignment: isDesktop ? Alignment.center : Alignment.centerLeft,
           child: Text(
             context.strings.getInTouch,
-            style: context.textTheme.mobileTitle,
+            style: isDesktop
+                ? context.textTheme.mainTitle
+                : context.textTheme.mobileTitle,
           ),
         ),
         const SizedBox(height: 20),
@@ -32,9 +35,13 @@ class ContactBlock extends StatelessWidget {
         Text(
           context.strings.dropMeEmail,
           textAlign: TextAlign.center,
-          style: context.textTheme.mobileBodyText.copyWith(
-            fontWeight: FontWeight.bold,
-          ),
+          style: isDesktop
+              ? context.textTheme.mainBodyText.copyWith(
+                  fontWeight: FontWeight.bold,
+                )
+              : context.textTheme.mobileBodyText.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
         ),
         const SizedBox(height: 20),
         _buildSocialMediaLinks(),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../utils/build_context_ext.dart';
+
 class NavMenuItem extends StatelessWidget {
   final String title;
   final VoidCallback? onTap;
@@ -18,9 +20,9 @@ class NavMenuItem extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
         child: Text(
           title,
-          // style: context.breakpoint.isDesktop || context.breakpoint.isTablet
-          //     ? context.textTheme
-          //     : context.textTheme.mobileMenuItem,
+          style: !context.isDesktop
+              ? context.textTheme.mobileSubtitle
+              : context.textTheme.mainSubtitle,
         ),
       ),
     );

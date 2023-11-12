@@ -9,10 +9,13 @@ class ReferencesBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           context.strings.apparentlyMyColleagues,
-          style: context.textTheme.mobileTitle,
+          style: context.isDesktop
+              ? context.textTheme.mainTitle
+              : context.textTheme.mobileTitle,
         ),
         const SizedBox(height: 20),
         _buildReferenceCard(
@@ -57,6 +60,7 @@ class ReferencesBlock extends StatelessWidget {
     required String name,
     required String company,
   }) {
+    final isDesktop = context.isDesktop;
     return Container(
       decoration: BoxDecoration(border: Border.all(width: 4)),
       child: Padding(
@@ -95,12 +99,16 @@ class ReferencesBlock extends StatelessWidget {
                     children: [
                       Text(
                         name,
-                        style: context.textTheme.mobileSubtitle,
+                        style: isDesktop
+                            ? context.textTheme.mainSubtitle
+                            : context.textTheme.mobileSubtitle,
                       ),
                       const SizedBox(height: 4),
                       Text(
                         company,
-                        style: context.textTheme.mobileBodyText,
+                        style: isDesktop
+                            ? context.textTheme.mainBodyText
+                            : context.textTheme.mobileBodyText,
                       ),
                     ],
                   ),
