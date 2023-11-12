@@ -11,10 +11,6 @@ ThemeData _createTheme() {
     ),
     splashColor: Colors.transparent,
     splashFactory: NoSplash.splashFactory,
-    scrollbarTheme: ScrollbarThemeData(
-        thumbColor: MaterialStateProperty.all<Color>(Colors.red),
-        trackColor: MaterialStateProperty.all<Color>(Colors.red),
-        thumbVisibility: MaterialStateProperty.all(true)),
   );
 
   return themeData;
