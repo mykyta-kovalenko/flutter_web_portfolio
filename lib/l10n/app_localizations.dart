@@ -94,7 +94,7 @@ abstract class AppLocalizations {
   /// No description provided for @appName.
   ///
   /// In en, this message translates to:
-  /// **'App'**
+  /// **'Mykyta Kovalenko — Mobile Engineer'**
   String get appName;
 
   /// No description provided for @heyImMykyta.
