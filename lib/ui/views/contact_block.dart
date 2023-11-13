@@ -14,6 +14,10 @@ class ContactBlock extends StatelessWidget {
     launchUrlString(context.strings.urlContactInformation);
   }
 
+  void _onEmailTap(BuildContext context) {
+    launchUrlString('mailto:${context.strings.email}');
+  }
+
   void _onLinkedInTap(BuildContext context) {
     launchUrlString(context.strings.urlLinkedIn);
   }
@@ -58,7 +62,7 @@ class ContactBlock extends StatelessWidget {
                 ),
         ),
         AppTextButton(
-          onTap: () {},
+          onTap: () => _onEmailTap(context),
           title: context.strings.email,
           style: isDesktop
               ? context.textTheme.mainBodyText.copyWith(
@@ -68,7 +72,7 @@ class ContactBlock extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 36),
         _buildSocialMediaLinks(context),
       ],
     );

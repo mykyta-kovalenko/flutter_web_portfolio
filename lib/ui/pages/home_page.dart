@@ -164,22 +164,16 @@ class _MobileMenuPopup extends StatelessWidget {
                     ),
                   ),
                   NavMenuItem(
-                    title: 'Projects Overview',
-                    onTap: () {
-                      Navigator.of(context).pop();
-                    },
+                    title: context.strings.projectsOverview,
+                    onTap: () => Navigator.of(context).pop(),
                   ),
                   NavMenuItem(
-                    title: 'Projects Structure',
-                    onTap: () {
-                      Navigator.of(context).pop();
-                    },
+                    title: context.strings.projectsStructure,
+                    onTap: () => Navigator.of(context).pop(),
                   ),
                   NavMenuItem(
-                    title: 'Resources',
-                    onTap: () {
-                      Navigator.of(context).pop();
-                    },
+                    title: context.strings.resources,
+                    onTap: () => Navigator.of(context).pop(),
                   ),
                   const SizedBox(height: 48),
                 ],

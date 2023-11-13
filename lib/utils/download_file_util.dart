@@ -2,7 +2,7 @@
 import 'dart:html';
 
 void downloadFile(url) {
-  AnchorElement anchorELement = AnchorElement(href: url);
+  AnchorElement anchorELement = AnchorElement(href: 'assets/$url');
   anchorELement.download = 'mykyta-kovalenko-resume';
 
   anchorELement.click();
