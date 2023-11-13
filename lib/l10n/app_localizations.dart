@@ -498,6 +498,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'https://lineup.ua/'**
   String get urlLineUp;
+
+  /// No description provided for @urlContactInformation.
+  ///
+  /// In en, this message translates to:
+  /// **'https://forms.gle/2hHy8weDxgG2R9nd9'**
+  String get urlContactInformation;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

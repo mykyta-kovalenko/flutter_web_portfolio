@@ -10,6 +10,10 @@ import 'buttons/app_text_button.dart';
 class ContactBlock extends StatelessWidget {
   const ContactBlock({super.key});
 
+  void _onLetsChatTap(BuildContext context) {
+    launchUrlString(context.strings.urlContactInformation);
+  }
+
   void _onLinkedInTap(BuildContext context) {
     launchUrlString(context.strings.urlLinkedIn);
   }
@@ -38,7 +42,7 @@ class ContactBlock extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         AppButton(
-          onPressed: () {},
+          onPressed: () => _onLetsChatTap(context),
           title: context.strings.letsChat,
         ),
         const SizedBox(height: 20),

@@ -57,6 +57,11 @@ class Assets {
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const String mykytaKovalenkoResume =
+      'assets/mykyta_kovalenko_resume.pdf';
+
+  /// List of all assets
+  List<String> get values => [mykytaKovalenkoResume];
 }
 
 class AssetGenImage {

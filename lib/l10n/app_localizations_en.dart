@@ -207,4 +207,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get urlLineUp => 'https://lineup.ua/';
+
+  @override
+  String get urlContactInformation => 'https://forms.gle/2hHy8weDxgG2R9nd9';
 }
