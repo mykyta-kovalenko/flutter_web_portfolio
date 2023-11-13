@@ -140,7 +140,9 @@ class _MobileGreeting extends StatelessWidget {
           alignment: Alignment.center,
           child: AppButton(
             //TODO: Download PDF
-            onPressed: () {},
+            onPressed: () {
+              downloadFile(Assets.mykytaKovalenkoResume);
+            },
             title: context.strings.getResume,
           ),
         ),
