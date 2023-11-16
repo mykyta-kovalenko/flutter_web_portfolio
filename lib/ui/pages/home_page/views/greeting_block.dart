@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../gen/assets.gen.dart';
-import '../../utils/build_context_ext.dart';
-import '../../utils/download_file_util.dart';
-import 'buttons/app_button.dart';
+import '../../../../gen/assets.gen.dart';
+import '../../../../utils/build_context_ext.dart';
+import '../../../../utils/download_file_util.dart';
+import '../../../views/buttons/app_button.dart';
 
 class GreetingBlock extends StatelessWidget {
   const GreetingBlock({super.key});

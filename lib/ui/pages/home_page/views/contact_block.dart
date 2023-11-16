@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import '../../gen/assets.gen.dart';
-import '../../utils/build_context_ext.dart';
-import 'buttons/app_button.dart';
-import 'buttons/app_icon_button.dart';
-import 'buttons/app_text_button.dart';
+import '../../../../gen/assets.gen.dart';
+import '../../../../utils/build_context_ext.dart';
+import '../../../views/buttons/app_button.dart';
+import '../../../views/buttons/app_icon_button.dart';
+import '../../../views/buttons/app_text_button.dart';
 
 class ContactBlock extends StatelessWidget {
   const ContactBlock({super.key});

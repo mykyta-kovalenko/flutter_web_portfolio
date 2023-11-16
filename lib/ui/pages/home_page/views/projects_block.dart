@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-import '../../utils/build_context_ext.dart';
+import '../../../../utils/build_context_ext.dart';
 
 class ProjectsBlock extends StatelessWidget {
   final DataGridSource projects;

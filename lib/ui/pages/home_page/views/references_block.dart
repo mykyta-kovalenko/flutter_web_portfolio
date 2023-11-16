@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import '../../gen/assets.gen.dart';
-import '../../utils/build_context_ext.dart';
-import 'buttons/app_text_button.dart';
+import '../../../../gen/assets.gen.dart';
+import '../../../../utils/build_context_ext.dart';
+import '../../../views/buttons/app_text_button.dart';
 
 class ReferencesBlock extends StatelessWidget {
   const ReferencesBlock({super.key});

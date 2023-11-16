@@ -1,14 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import '../../mock/projects.dart';
-import '../../services/projects_data_source_service.dart';
-import '../../utils/build_context_ext.dart';
-import '../views/contact_block.dart';
-import '../views/greeting_block.dart';
-import '../views/nav_menu_item.dart';
-import '../views/projects_block.dart';
-import '../views/references_block.dart';
+import '../../../mock/projects.dart';
+import '../../../services/projects_data_source_service.dart';
+import '../../../utils/build_context_ext.dart';
+import '../../views/nav_menu_item.dart';
+import 'views/contact_block.dart';
+import 'views/greeting_block.dart';
+import 'views/projects_block.dart';
+import 'views/references_block.dart';
 
 @RoutePage()
 class HomePage extends StatefulWidget {
