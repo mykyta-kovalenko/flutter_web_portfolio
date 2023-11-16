@@ -442,7 +442,7 @@ abstract class AppLocalizations {
   /// No description provided for @projectsOverview.
   ///
   /// In en, this message translates to:
-  /// **'Projects Overview(TBD)'**
+  /// **'Projects Overview'**
   String get projectsOverview;
 
   /// No description provided for @projectsStructure.

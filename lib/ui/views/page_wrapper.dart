@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../config/router/app_router.dart';
 import '../../utils/build_context_ext.dart';
 import 'nav_menu_item.dart';
 
@@ -67,13 +68,19 @@ class _PageWrapperState extends State<PageWrapper> {
   Widget _buildNonMobileAppBar(BuildContext context, double desktopSizing) {
     return Row(
       children: [
-        Text(
-          context.strings.mK,
-          style: context.textTheme.mainTitle,
+        GestureDetector(
+          onTap: () => router.pushHomePage(),
+          child: Text(
+            context.strings.mK,
+            style: context.textTheme.mainTitle,
+          ),
         ),
         const SizedBox(width: 36),
         Flexible(
-          child: NavMenuItem(title: context.strings.projectsOverview),
+          child: NavMenuItem(
+            onTap: () => router.pushProjectsOverviewPage(),
+            title: context.strings.projectsOverview,
+          ),
         ),
         const SizedBox(width: 36),
         Flexible(
@@ -92,9 +99,12 @@ class _PageWrapperState extends State<PageWrapper> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          context.strings.mK,
-          style: const TextStyle(fontSize: 40),
+        GestureDetector(
+          onTap: () => router.pushHomePage(),
+          child: Text(
+            context.strings.mK,
+            style: const TextStyle(fontSize: 40),
+          ),
         ),
         IconButton(
           icon: const Icon(Icons.menu),
@@ -134,7 +144,10 @@ class _MobileMenuPopup extends StatelessWidget {
                   ),
                   NavMenuItem(
                     title: context.strings.projectsOverview,
-                    onTap: () => Navigator.of(context).pop(),
+                    onTap: () {
+                      router.pushProjectsOverviewPage();
+                      Navigator.of(context).pop();
+                    },
                   ),
                   NavMenuItem(
                     title: context.strings.projectsStructure,

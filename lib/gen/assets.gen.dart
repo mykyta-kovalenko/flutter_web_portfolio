@@ -39,17 +39,112 @@ class $AssetsImagesGen {
   /// File path: assets/images/bogdan.jpeg
   AssetGenImage get bogdan => const AssetGenImage('assets/images/bogdan.jpeg');
 
+  /// File path: assets/images/ff_0.jpeg
+  AssetGenImage get ff0 => const AssetGenImage('assets/images/ff_0.jpeg');
+
+  /// File path: assets/images/ff_1.jpg
+  AssetGenImage get ff1 => const AssetGenImage('assets/images/ff_1.jpg');
+
+  /// File path: assets/images/ff_2.jpg
+  AssetGenImage get ff2 => const AssetGenImage('assets/images/ff_2.jpg');
+
+  /// File path: assets/images/ff_3.jpg
+  AssetGenImage get ff3 => const AssetGenImage('assets/images/ff_3.jpg');
+
+  /// File path: assets/images/ff_4.jpg
+  AssetGenImage get ff4 => const AssetGenImage('assets/images/ff_4.jpg');
+
+  /// File path: assets/images/ff_5.jpg
+  AssetGenImage get ff5 => const AssetGenImage('assets/images/ff_5.jpg');
+
+  /// File path: assets/images/ff_6.jpg
+  AssetGenImage get ff6 => const AssetGenImage('assets/images/ff_6.jpg');
+
+  /// File path: assets/images/groovifi_0.jpg
+  AssetGenImage get groovifi0 =>
+      const AssetGenImage('assets/images/groovifi_0.jpg');
+
+  /// File path: assets/images/groovifi_1.jpg
+  AssetGenImage get groovifi1 =>
+      const AssetGenImage('assets/images/groovifi_1.jpg');
+
+  /// File path: assets/images/groovifi_2.jpg
+  AssetGenImage get groovifi2 =>
+      const AssetGenImage('assets/images/groovifi_2.jpg');
+
+  /// File path: assets/images/groovifi_3.jpg
+  AssetGenImage get groovifi3 =>
+      const AssetGenImage('assets/images/groovifi_3.jpg');
+
+  /// File path: assets/images/groovifi_4.jpg
+  AssetGenImage get groovifi4 =>
+      const AssetGenImage('assets/images/groovifi_4.jpg');
+
+  /// File path: assets/images/groovifi_5.jpg
+  AssetGenImage get groovifi5 =>
+      const AssetGenImage('assets/images/groovifi_5.jpg');
+
+  /// File path: assets/images/jiq_0.jpg
+  AssetGenImage get jiq0 => const AssetGenImage('assets/images/jiq_0.jpg');
+
+  /// File path: assets/images/jiq_1.jpg
+  AssetGenImage get jiq1 => const AssetGenImage('assets/images/jiq_1.jpg');
+
+  /// File path: assets/images/jiq_2.jpg
+  AssetGenImage get jiq2 => const AssetGenImage('assets/images/jiq_2.jpg');
+
   /// File path: assets/images/oleksii.jpeg
   AssetGenImage get oleksii =>
       const AssetGenImage('assets/images/oleksii.jpeg');
+
+  /// File path: assets/images/threewella_0.jpg
+  AssetGenImage get threewella0 =>
+      const AssetGenImage('assets/images/threewella_0.jpg');
+
+  /// File path: assets/images/threewella_1.jpg
+  AssetGenImage get threewella1 =>
+      const AssetGenImage('assets/images/threewella_1.jpg');
+
+  /// File path: assets/images/threewella_2.jpg
+  AssetGenImage get threewella2 =>
+      const AssetGenImage('assets/images/threewella_2.jpg');
+
+  /// File path: assets/images/threewella_3.jpg
+  AssetGenImage get threewella3 =>
+      const AssetGenImage('assets/images/threewella_3.jpg');
 
   /// File path: assets/images/yaroslav.jpeg
   AssetGenImage get yaroslav =>
       const AssetGenImage('assets/images/yaroslav.jpeg');
 
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [img4102, anastasiia, bogdan, oleksii, yaroslav];
+  List<AssetGenImage> get values => [
+        img4102,
+        anastasiia,
+        bogdan,
+        ff0,
+        ff1,
+        ff2,
+        ff3,
+        ff4,
+        ff5,
+        ff6,
+        groovifi0,
+        groovifi1,
+        groovifi2,
+        groovifi3,
+        groovifi4,
+        groovifi5,
+        jiq0,
+        jiq1,
+        jiq2,
+        oleksii,
+        threewella0,
+        threewella1,
+        threewella2,
+        threewella3,
+        yaroslav
+      ];
 }
 
 class Assets {

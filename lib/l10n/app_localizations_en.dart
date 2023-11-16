@@ -179,7 +179,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get email => 'mykyta.kovalenko24@gmail.com';
 
   @override
-  String get projectsOverview => 'Projects Overview(TBD)';
+  String get projectsOverview => 'Projects Overview';
 
   @override
   String get projectsStructure => 'Projects Structure(TBD)';
