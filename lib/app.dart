@@ -1,8 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-import 'gen/app_router.dart';
+import 'config/locator.dart';
+import 'config/router/app_auto_router.dart';
+import 'config/router/app_observer.dart';
 import 'l10n/app_localizations.dart';
 import 'themes/light/light_theme.dart';
 import 'themes/theme/app_theme.dart';
@@ -13,20 +16,31 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appRouter = locator<AppAutoRouter>();
+
     return AppTheme(
       theme: LightThemeData(),
-      child: Builder(builder: (context) {
-        return MaterialApp.router(
-          routerConfig: appRouter.config(),
-          debugShowCheckedModeBanner: false,
-          theme: AppTheme.of(context).themeData,
-          supportedLocales: AppLocalizations.supportedLocales,
-          onGenerateTitle: (context) => context.strings.appName,
-          localizationsDelegates: AppLocalizations.localizationsDelegates,
-          scrollBehavior: const ScrollBehavior().copyWith(overscroll: false),
-          builder: _buildApp,
-        );
-      }),
+      child: Builder(
+        builder: (context) {
+          return MaterialApp.router(
+            debugShowCheckedModeBanner: false,
+            theme: AppTheme.of(context).themeData,
+            supportedLocales: AppLocalizations.supportedLocales,
+            onGenerateTitle: (context) => context.strings.appName,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            scrollBehavior: const ScrollBehavior().copyWith(overscroll: false),
+            routeInformationParser: appRouter.defaultRouteParser(),
+            routeInformationProvider: appRouter.routeInfoProvider(),
+            routerDelegate: appRouter.delegate(
+              navigatorObservers: () => [
+                AppObserver(),
+                AutoRouteObserver(),
+              ],
+            ),
+            builder: _buildApp,
+          );
+        },
+      ),
     );
   }
 

@@ -7,11 +7,11 @@
 // ignore_for_file: type=lint
 // coverage:ignore-file
 
-part of 'app_router.dart';
+part of 'app_auto_router.dart';
 
-abstract class _$AppRouter extends RootStackRouter {
+abstract class _$AppAutoRouter extends RootStackRouter {
   // ignore: unused_element
-  _$AppRouter({super.navigatorKey});
+  _$AppAutoRouter({super.navigatorKey});
 
   @override
   final Map<String, PageFactory> pagesMap = {
