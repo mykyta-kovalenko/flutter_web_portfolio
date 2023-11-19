@@ -24,7 +24,7 @@ abstract class _$AppAutoRouter extends RootStackRouter {
     ProjectsOverviewRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const ProjectsOverviewPage(),
+        child: WrappedRoute(child: const ProjectsOverviewPage()),
       );
     },
   };

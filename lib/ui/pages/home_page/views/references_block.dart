@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../gen/assets.gen.dart';
 import '../../../../utils/build_context_ext.dart';
+import '../../../views/app_border_box.dart';
 import '../../../views/buttons/app_text_button.dart';
 
 class ReferencesBlock extends StatelessWidget {
@@ -132,29 +133,25 @@ class ReferencesBlock extends StatelessWidget {
     required String companyUrl,
   }) {
     final isDesktop = context.isDesktop;
-    return Container(
-      decoration: BoxDecoration(border: Border.all(width: 4)),
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          children: [
-            Text(
-              reference,
-              style: isDesktop
-                  ? context.textTheme.mainBodyText
-                  : context.textTheme.mobileBodyText,
-            ),
-            const SizedBox(height: 16),
-            _buildColleagueTile(
-              context,
-              isDesktop,
-              name: name,
-              imagePath: imagePath,
-              company: company,
-              companyUrl: companyUrl,
-            ),
-          ],
-        ),
+    return AppBorderBox(
+      child: Column(
+        children: [
+          Text(
+            reference,
+            style: isDesktop
+                ? context.textTheme.mainBodyText
+                : context.textTheme.mobileBodyText,
+          ),
+          const SizedBox(height: 16),
+          _buildColleagueTile(
+            context,
+            isDesktop,
+            name: name,
+            imagePath: imagePath,
+            company: company,
+            companyUrl: companyUrl,
+          ),
+        ],
       ),
     );
   }
