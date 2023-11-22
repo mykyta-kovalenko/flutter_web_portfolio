@@ -19,7 +19,7 @@ enum ProjectLocation {
       case ProjectLocation.israel:
         return context.strings.israel;
       default:
-        return '';
+        return 'Other';
     }
   }
 }

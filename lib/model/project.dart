@@ -10,6 +10,7 @@ class Project extends Equatable {
   final ProjectStatus projectStatus;
   final ProjectLocation projectLocation;
   final String description;
+  final List<String>? images;
 
   const Project({
     required this.name,
@@ -17,6 +18,7 @@ class Project extends Equatable {
     required this.projectStatus,
     required this.projectLocation,
     required this.description,
+    this.images,
   });
 
   Project copyWith({
@@ -25,6 +27,7 @@ class Project extends Equatable {
     ProjectStatus? projectStatus,
     ProjectLocation? projectLocation,
     String? description,
+    List<String>? images,
   }) {
     return Project(
       name: name ?? this.name,
@@ -32,17 +35,19 @@ class Project extends Equatable {
       projectStatus: projectStatus ?? this.projectStatus,
       projectLocation: projectLocation ?? this.projectLocation,
       description: description ?? this.description,
+      images: images ?? this.images,
     );
   }
 
   @override
-  List<Object> get props {
+  List<Object?> get props {
     return [
       name,
       projectPlatform,
       projectStatus,
       projectLocation,
       description,
+      images,
     ];
   }
 }

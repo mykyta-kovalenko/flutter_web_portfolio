@@ -1,0 +1,1 @@
+ /Users/magnito/projects/flutter_web_portfolio/lib/l10n/app_localizations_en.dart /Users/magnito/projects/flutter_web_portfolio/lib/l10n/missing_localizations.json /Users/magnito/projects/flutter_web_portfolio/lib/l10n/app_localizations.dart:  /Users/magnito/projects/flutter_web_portfolio/l10n.yaml /Users/magnito/projects/flutter_web_portfolio/lib/l10n/strings_en.arb

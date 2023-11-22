@@ -21,8 +21,6 @@ enum ProjectStatus {
         return context.strings.abandoned;
       case ProjectStatus.paused:
         return context.strings.paused;
-      default:
-        return '';
     }
   }
 }

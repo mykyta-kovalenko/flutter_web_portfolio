@@ -1,6 +1,8 @@
 import 'dart:developer';
+import 'dart:ui';
 
 import 'package:auto_route/auto_route.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,6 +12,7 @@ import '../../../bloc/projects_overview_page/projects_overview_page_state.dart';
 import '../../../utils/bloc_auto_route_mixin.dart';
 import '../../../utils/build_context_ext.dart';
 import '../../views/app_border_box.dart';
+import '../../views/buttons/app_icon_button.dart';
 import '../../views/page_wrapper.dart';
 
 enum CrossAxisCount {
@@ -39,6 +42,7 @@ class ProjectsOverviewPage extends StatefulWidget
 }
 
 class _ProjectsOverviewPageState extends State<ProjectsOverviewPage> {
+  final CarouselController _carouselController = CarouselController();
   int _hoveredIndex = -1;
 
   @override
@@ -54,6 +58,32 @@ class _ProjectsOverviewPageState extends State<ProjectsOverviewPage> {
     if (context.isTablet) return CrossAxisCount.twoRows.count;
 
     return CrossAxisCount.oneRow.count;
+  }
+
+  String _getAndroidUrl(String projectName) {
+    switch (projectName) {
+      case 'Groovifi':
+        return context.strings.groovifiAndroidUrl;
+      case '3Wella':
+        return context.strings.threeWellaAndroidUrl;
+      case 'Java Interview Questions':
+        return context.strings.jiqAndroidUrl;
+      case 'Finance Flow':
+        return context.strings.financeFlowAndroidUrl;
+      default:
+        return '';
+    }
+  }
+
+  String _getIosUrl(String projectName) {
+    switch (projectName) {
+      case 'Groovifi':
+        return context.strings.groovifiIosUrl;
+      case '3Wella':
+        return context.strings.threeWellaIosUrl;
+      default:
+        return '';
+    }
   }
 
   @override
@@ -84,7 +114,7 @@ class _ProjectsOverviewPageState extends State<ProjectsOverviewPage> {
     );
   }
 
-  AppBorderBox _buildProjectCard(
+  Widget _buildProjectCard(
     BuildContext context,
     int index,
     ProjectsOverviewPageState state,
@@ -94,13 +124,148 @@ class _ProjectsOverviewPageState extends State<ProjectsOverviewPage> {
         splashFactory: NoSplash.splashFactory,
         hoverColor: context.colorTheme.transparent,
         splashColor: context.colorTheme.transparent,
-        onTap: () {
+        onTap: () async {
           log('Go to Details');
-          showDialog(
+          await showDialog(
             context: context,
             builder: (context) {
-              return const AlertDialog(
-                title: Text('Details'),
+              return BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+                child: Dialog(
+                  shadowColor: context.colorTheme.transparent,
+                  backgroundColor: context.colorTheme.transparent,
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width / 3,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 18,
+                                    color: context.colorTheme.mainYellow,
+                                  ),
+                                ],
+                              ),
+                              child: IconButton(
+                                onPressed: context.router.pop,
+                                icon: const Icon(Icons.close),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          CarouselSlider(
+                            carouselController: _carouselController,
+                            options: CarouselOptions(
+                              height: 400,
+                            ),
+                            items: state.projects[index].images?.map(
+                              (e) {
+                                return Image.asset(e, fit: BoxFit.cover);
+                              },
+                            ).toList(),
+                          ),
+                          const SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 18,
+                                      color: context.colorTheme.mainYellow,
+                                    ),
+                                  ],
+                                ),
+                                child: IconButton(
+                                  onPressed: () =>
+                                      _carouselController.previousPage(),
+                                  icon: const Icon(Icons.arrow_back_ios),
+                                ),
+                              ),
+                              const SizedBox(width: 20),
+                              Container(
+                                decoration: BoxDecoration(
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 18,
+                                      color: context.colorTheme.mainYellow,
+                                    ),
+                                  ],
+                                ),
+                                child: IconButton(
+                                  onPressed: () =>
+                                      _carouselController.nextPage(),
+                                  icon: const Icon(Icons.arrow_forward_ios),
+                                ),
+                              )
+                            ],
+                          ),
+                          const SizedBox(height: 24),
+                          Container(
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 18,
+                                  color: context.colorTheme.mainYellow,
+                                ),
+                              ],
+                            ),
+                            child: Text(
+                              state.projects[index].description,
+                              textAlign: TextAlign.center,
+                              style: context.textTheme.mobileSubtitle.copyWith(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ...state.projects[index].projectPlatform.map((e) {
+                                return Container(
+                                  margin: const EdgeInsets.all(16),
+                                  decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                        blurRadius: 18,
+                                        color: context.colorTheme.mainYellow,
+                                      ),
+                                    ],
+                                  ),
+                                  child: AppIconButton(
+                                    () {
+                                      final androidUrl = _getAndroidUrl(
+                                        state.projects[index].name,
+                                      );
+                                      final iosUrl = _getIosUrl(
+                                        state.projects[index].name,
+                                      );
+
+                                      log(
+                                        'Go to ${e.getUrl(
+                                          androidUrl: androidUrl,
+                                          iosUrl: iosUrl,
+                                        )}',
+                                      );
+                                    },
+                                    e.getIcon(context),
+                                  ),
+                                );
+                              }).toList(),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
               );
             },
           );
@@ -123,7 +288,7 @@ class _ProjectsOverviewPageState extends State<ProjectsOverviewPage> {
                       blurRadius: 12,
                       spreadRadius: 12,
                       color: context.colorTheme.black,
-                    )
+                    ),
                   ],
                 ),
               ),

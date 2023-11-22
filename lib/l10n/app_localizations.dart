@@ -504,6 +504,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'https://forms.gle/2hHy8weDxgG2R9nd9'**
   String get urlContactInformation;
+
+  /// No description provided for @threeWellaIosUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'https://apps.apple.com/us/app/3wella/id6444644902'**
+  String get threeWellaIosUrl;
+
+  /// No description provided for @threeWellaAndroidUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'https://play.google.com/store/apps/details?id=org.three_wella'**
+  String get threeWellaAndroidUrl;
+
+  /// No description provided for @groovifiIosUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'https://apps.apple.com/us/app/groovifi-playlist-generator/id1597777786'**
+  String get groovifiIosUrl;
+
+  /// No description provided for @groovifiAndroidUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'https://play.google.com/store/apps/details?id=com.parshendata.groovifi'**
+  String get groovifiAndroidUrl;
+
+  /// No description provided for @jiqAndroidUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'https://play.google.com/store/apps/details?id=com.ab.jiq'**
+  String get jiqAndroidUrl;
+
+  /// No description provided for @financeFlowAndroidUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'https://play.google.com/store/apps/details?id=com.proarea.money_lover'**
+  String get financeFlowAndroidUrl;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

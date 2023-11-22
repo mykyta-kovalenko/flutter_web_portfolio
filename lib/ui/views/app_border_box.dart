@@ -20,8 +20,8 @@ class AppBorderBox extends StatelessWidget {
           color: context.colorTheme.black,
         ),
         borderRadius: const BorderRadius.only(
-          bottomLeft: Radius.circular(7),
-          bottomRight: Radius.circular(7),
+          bottomLeft: Radius.circular(8),
+          bottomRight: Radius.circular(8),
         ),
       ),
       child: Container(

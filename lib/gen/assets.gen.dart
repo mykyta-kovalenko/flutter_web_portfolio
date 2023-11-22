@@ -12,8 +12,14 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/icons8-app-store.svg
+  String get icons8AppStore => 'assets/icons/icons8-app-store.svg';
+
   /// File path: assets/icons/icons8-github.svg
   String get icons8Github => 'assets/icons/icons8-github.svg';
+
+  /// File path: assets/icons/icons8-google-play.svg
+  String get icons8GooglePlay => 'assets/icons/icons8-google-play.svg';
 
   /// File path: assets/icons/icons8-instagram.svg
   String get icons8Instagram => 'assets/icons/icons8-instagram.svg';
@@ -22,7 +28,13 @@ class $AssetsIconsGen {
   String get icons8Linkedin => 'assets/icons/icons8-linkedin.svg';
 
   /// List of all assets
-  List<String> get values => [icons8Github, icons8Instagram, icons8Linkedin];
+  List<String> get values => [
+        icons8AppStore,
+        icons8Github,
+        icons8GooglePlay,
+        icons8Instagram,
+        icons8Linkedin
+      ];
 }
 
 class $AssetsImagesGen {

@@ -210,4 +210,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get urlContactInformation => 'https://forms.gle/2hHy8weDxgG2R9nd9';
+
+  @override
+  String get threeWellaIosUrl => 'https://apps.apple.com/us/app/3wella/id6444644902';
+
+  @override
+  String get threeWellaAndroidUrl => 'https://play.google.com/store/apps/details?id=org.three_wella';
+
+  @override
+  String get groovifiIosUrl => 'https://apps.apple.com/us/app/groovifi-playlist-generator/id1597777786';
+
+  @override
+  String get groovifiAndroidUrl => 'https://play.google.com/store/apps/details?id=com.parshendata.groovifi';
+
+  @override
+  String get jiqAndroidUrl => 'https://play.google.com/store/apps/details?id=com.ab.jiq';
+
+  @override
+  String get financeFlowAndroidUrl => 'https://play.google.com/store/apps/details?id=com.proarea.money_lover';
 }

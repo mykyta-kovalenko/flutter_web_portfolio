@@ -18,8 +18,12 @@ class AppButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         textStyle: context.isDesktop
-            ? context.textTheme.mainSubtitle
-            : context.textTheme.mobileSubtitle,
+            ? context.textTheme.mainSubtitle.copyWith(
+                color: context.colorTheme.white,
+              )
+            : context.textTheme.mobileSubtitle.copyWith(
+                color: context.colorTheme.white,
+              ),
       ),
       child: Text(title.toUpperCase()),
     );
