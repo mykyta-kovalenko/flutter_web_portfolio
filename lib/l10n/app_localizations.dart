@@ -454,7 +454,7 @@ abstract class AppLocalizations {
   /// No description provided for @resources.
   ///
   /// In en, this message translates to:
-  /// **'Resources(TBD)'**
+  /// **'Resources'**
   String get resources;
 
   /// No description provided for @mK.

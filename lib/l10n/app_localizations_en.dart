@@ -185,7 +185,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get projectsStructure => 'Projects Structure(TBD)';
 
   @override
-  String get resources => 'Resources(TBD)';
+  String get resources => 'Resources';
 
   @override
   String get mK => 'MK';

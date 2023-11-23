@@ -34,6 +34,10 @@ class ProjectsOverviewPageState extends Equatable {
 
   @override
   List<Object?> get props {
-    return [status, projects, error];
+    return [
+      status,
+      projects,
+      error,
+    ];
   }
 }
