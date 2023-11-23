@@ -6,10 +6,10 @@ part 'app_theme_data.dart';
 
 class AppTheme extends InheritedWidget {
   const AppTheme({
-    Key? key,
+    super.key,
     required this.theme,
-    required Widget child,
-  }) : super(key: key, child: child);
+    required super.child,
+  });
 
   static AppThemeData of(BuildContext context) => maybeOf(context)!;
   static AppThemeData? maybeOf(BuildContext context) {

@@ -11,6 +11,7 @@ class Project extends Equatable {
   final ProjectLocation projectLocation;
   final String description;
   final List<String>? images;
+  final String? logo;
 
   const Project({
     required this.name,
@@ -19,6 +20,7 @@ class Project extends Equatable {
     required this.projectLocation,
     required this.description,
     this.images,
+    this.logo,
   });
 
   Project copyWith({
@@ -28,6 +30,7 @@ class Project extends Equatable {
     ProjectLocation? projectLocation,
     String? description,
     List<String>? images,
+    String? logo,
   }) {
     return Project(
       name: name ?? this.name,
@@ -36,6 +39,7 @@ class Project extends Equatable {
       projectLocation: projectLocation ?? this.projectLocation,
       description: description ?? this.description,
       images: images ?? this.images,
+      logo: logo ?? this.logo,
     );
   }
 
@@ -48,6 +52,7 @@ class Project extends Equatable {
       projectLocation,
       description,
       images,
+      logo,
     ];
   }
 }

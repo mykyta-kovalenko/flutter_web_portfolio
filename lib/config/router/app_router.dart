@@ -8,7 +8,7 @@ CvAppRouter get router => locator<CvAppRouter>();
 
 @singleton
 class CvAppRouter extends BaseRouter {
-  CvAppRouter(AppAutoRouter router) : super(router);
+  CvAppRouter(AppAutoRouter super.router);
 
   Future<void> pushHomePage() async {
     await push(const HomeRoute());

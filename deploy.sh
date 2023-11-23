@@ -12,6 +12,6 @@ flutter pub get
 # > For now, I'm going to treat this issue as a feature request to make CanvasKit initial start-up time faster.
 #
 # flutter build web --pwa-strategy=none --dart2js-optimization=O2 --web-renderer=canvaskit
-flutter build web --pwa-strategy=none --dart2js-optimization=O2 --web-renderer=html
+flutter build web --pwa-strategy=none --dart2js-optimization=O2 --web-renderer=html --no-tree-shake-icons --release
 
 firebase deploy --only hosting

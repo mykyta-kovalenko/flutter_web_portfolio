@@ -72,6 +72,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/ff_6.jpg
   AssetGenImage get ff6 => const AssetGenImage('assets/images/ff_6.jpg');
 
+  /// File path: assets/images/ff_logo.png
+  AssetGenImage get ffLogo => const AssetGenImage('assets/images/ff_logo.png');
+
   /// File path: assets/images/groovifi_0.jpg
   AssetGenImage get groovifi0 =>
       const AssetGenImage('assets/images/groovifi_0.jpg');
@@ -96,6 +99,10 @@ class $AssetsImagesGen {
   AssetGenImage get groovifi5 =>
       const AssetGenImage('assets/images/groovifi_5.jpg');
 
+  /// File path: assets/images/groovifi_logo.png
+  AssetGenImage get groovifiLogo =>
+      const AssetGenImage('assets/images/groovifi_logo.png');
+
   /// File path: assets/images/jiq_0.jpg
   AssetGenImage get jiq0 => const AssetGenImage('assets/images/jiq_0.jpg');
 
@@ -104,6 +111,10 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/jiq_2.jpg
   AssetGenImage get jiq2 => const AssetGenImage('assets/images/jiq_2.jpg');
+
+  /// File path: assets/images/jiq_logo.png
+  AssetGenImage get jiqLogo =>
+      const AssetGenImage('assets/images/jiq_logo.png');
 
   /// File path: assets/images/oleksii.jpeg
   AssetGenImage get oleksii =>
@@ -125,6 +136,10 @@ class $AssetsImagesGen {
   AssetGenImage get threewella3 =>
       const AssetGenImage('assets/images/threewella_3.jpg');
 
+  /// File path: assets/images/threewella_logo.png
+  AssetGenImage get threewellaLogo =>
+      const AssetGenImage('assets/images/threewella_logo.png');
+
   /// File path: assets/images/yaroslav.jpeg
   AssetGenImage get yaroslav =>
       const AssetGenImage('assets/images/yaroslav.jpeg');
@@ -141,20 +156,24 @@ class $AssetsImagesGen {
         ff4,
         ff5,
         ff6,
+        ffLogo,
         groovifi0,
         groovifi1,
         groovifi2,
         groovifi3,
         groovifi4,
         groovifi5,
+        groovifiLogo,
         jiq0,
         jiq1,
         jiq2,
+        jiqLogo,
         oleksii,
         threewella0,
         threewella1,
         threewella2,
         threewella3,
+        threewellaLogo,
         yaroslav
       ];
 }
