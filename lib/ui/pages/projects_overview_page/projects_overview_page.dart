@@ -258,7 +258,7 @@ class _ProjectsOverviewPageState extends State<ProjectsOverviewPage> {
                                     e.getIcon(context),
                                   ),
                                 );
-                              }).toList(),
+                              }),
                             ],
                           )
                         ],

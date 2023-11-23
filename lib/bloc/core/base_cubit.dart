@@ -6,7 +6,7 @@ import '../../model/handled_error.dart';
 import '../../utils/logging.dart';
 
 abstract class BaseCubit<TState> extends Cubit<TState> {
-  BaseCubit(TState initialState) : super(initialState);
+  BaseCubit(super.initialState);
 
   void handleError(HandledError error);
 
