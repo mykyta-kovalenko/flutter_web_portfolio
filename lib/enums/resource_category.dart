@@ -1,9 +1,9 @@
 enum ResourceCategory {
-  article,
-  video,
-  podcast,
-  book,
-  course,
-  newsletter,
+  articles,
+  videos,
+  podcasts,
+  books,
+  courses,
+  newsletters,
   other;
 }
