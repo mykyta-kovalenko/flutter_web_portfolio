@@ -69,7 +69,7 @@ class _PageWrapperState extends State<PageWrapper> {
     return Row(
       children: [
         GestureDetector(
-          onTap: () => router.pushHomePage(),
+          onTap: router.pushHomePage,
           child: Text(
             context.strings.mK,
             style: context.textTheme.mainTitle,
@@ -78,7 +78,7 @@ class _PageWrapperState extends State<PageWrapper> {
         const SizedBox(width: 36),
         Flexible(
           child: NavMenuItem(
-            onTap: () => router.pushProjectsOverviewPage(),
+            onTap: router.pushProjectsOverviewPage,
             title: context.strings.projectsOverview,
           ),
         ),
@@ -88,7 +88,10 @@ class _PageWrapperState extends State<PageWrapper> {
         ),
         const SizedBox(width: 36),
         Flexible(
-          child: NavMenuItem(title: context.strings.resources),
+          child: NavMenuItem(
+            onTap: router.pushResourcesPage,
+            title: context.strings.resources,
+          ),
         ),
       ],
     );
@@ -100,7 +103,7 @@ class _PageWrapperState extends State<PageWrapper> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         GestureDetector(
-          onTap: () => router.pushHomePage(),
+          onTap: router.pushHomePage,
           child: Text(
             context.strings.mK,
             style: const TextStyle(fontSize: 40),
@@ -155,7 +158,10 @@ class _MobileMenuPopup extends StatelessWidget {
                   ),
                   NavMenuItem(
                     title: context.strings.resources,
-                    onTap: () => Navigator.of(context).pop(),
+                    onTap: () {
+                      router.pushResourcesPage();
+                      Navigator.of(context).pop();
+                    },
                   ),
                   const SizedBox(height: 48),
                 ],

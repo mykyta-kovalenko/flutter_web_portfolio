@@ -17,4 +17,8 @@ class CvAppRouter extends BaseRouter {
   Future<void> pushProjectsOverviewPage() async {
     await push(const ProjectsOverviewRoute());
   }
+
+  Future<void> pushResourcesPage() async {
+    await push(const ResourcesRoute());
+  }
 }

@@ -1,4 +1,3 @@
-import 'package:flutter/widgets.dart';
 import 'package:injectable/injectable.dart';
 
 import '../../model/handled_error.dart';
@@ -12,7 +11,9 @@ class ResourcesPageCubit extends BaseCubit<ResourcesPageState> {
 
   ResourcesPageCubit(
     this._resourcesService,
-  ) : super(const ResourcesPageState());
+  ) : super(const ResourcesPageState()) {
+    _getResources();
+  }
 
   @override
   void handleError(HandledError error) {
@@ -22,7 +23,7 @@ class ResourcesPageCubit extends BaseCubit<ResourcesPageState> {
     ));
   }
 
-  Future<void> getProjects(BuildContext context) async {
+  Future<void> _getResources() async {
     await makeErrorHandledCall(() async {
       emit(state.copyWith(
         resources: _resourcesService.getResources(),
