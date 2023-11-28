@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 
 import '../../ui/pages/home_page/home_page.dart';
 import '../../ui/pages/projects_overview_page/projects_overview_page.dart';
+import '../../ui/pages/projects_structure_page/projects_structure_page.dart';
 import '../../ui/pages/resources_page/resources_page.dart';
 
 part 'app_auto_router.gr.dart';
@@ -23,6 +24,10 @@ class AppAutoRouter extends _$AppAutoRouter {
         AutoRoute(
           path: '/projects-overview',
           page: ProjectsOverviewRoute.page,
+        ),
+        AutoRoute(
+          path: '/projects-structure',
+          page: ProjectsStructureRoute.page,
         ),
         AutoRoute(
           path: '/resources',

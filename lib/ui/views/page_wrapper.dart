@@ -84,7 +84,10 @@ class _PageWrapperState extends State<PageWrapper> {
         ),
         const SizedBox(width: 36),
         Flexible(
-          child: NavMenuItem(title: context.strings.projectsStructure),
+          child: NavMenuItem(
+            onTap: router.pushProjectsStructurePage,
+            title: context.strings.projectsStructure,
+          ),
         ),
         const SizedBox(width: 36),
         Flexible(
@@ -141,7 +144,7 @@ class _MobileMenuPopup extends StatelessWidget {
                       child: IconButton(
                         icon: const Icon(Icons.close),
                         iconSize: 44,
-                        onPressed: () => Navigator.of(context).pop(),
+                        onPressed: Navigator.of(context).pop,
                       ),
                     ),
                   ),
@@ -154,7 +157,10 @@ class _MobileMenuPopup extends StatelessWidget {
                   ),
                   NavMenuItem(
                     title: context.strings.projectsStructure,
-                    onTap: () => Navigator.of(context).pop(),
+                    onTap: () {
+                      router.pushProjectsStructurePage();
+                      Navigator.of(context).pop();
+                    },
                   ),
                   NavMenuItem(
                     title: context.strings.resources,
