@@ -13,7 +13,7 @@ class ProjectsStructurePage extends StatelessWidget {
     return PageWrapper(
       children: [
         Text(
-          'Hey There!\nSorry, I still working on this page!',
+          'Hey There!\nSorry, I\'m still working on this page!',
           style: context.isDesktop
               ? context.textTheme.mainTitle
               : context.textTheme.mobileTitle,
