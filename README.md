@@ -1,3 +1,3 @@
 # flutter_web_portfolio
 
-A new Flutter project.
+Mykyta Kovalenko Personal Website
