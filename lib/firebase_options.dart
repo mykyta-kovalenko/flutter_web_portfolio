@@ -62,3 +62,5 @@ class DefaultFirebaseOptions {
     measurementId: 'G-1EGX74RLGL',
   );
 }
+
+//TODO: Move this to CONFIG.
