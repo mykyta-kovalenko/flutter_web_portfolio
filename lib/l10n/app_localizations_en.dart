@@ -47,22 +47,22 @@ class AppLocalizationsEn extends AppLocalizations {
   String get description => 'Description';
 
   @override
-  String get liluPhotography => 'Lilu Photography';
+  String get iSeeTheWorld => 'I See The World';
 
   @override
-  String get liluPhotographyDescription => 'A website for a photographer from Austin, TX.';
+  String get iSeeTheWorldDescription => 'A website for a photographer from Austin, TX.';
 
   @override
   String get uAustin => 'UAustin';
 
   @override
-  String get uAustinDescription => 'Navigation-directory app for Ukrainian businesses in Austin, TX. Created on a volunteer basis.';
+  String get uAustinDescription => 'Directory app for Ukrainian businesses in Austin, TX. Created on a volunteer basis.';
 
   @override
   String get threeWella => '3Wella';
 
   @override
-  String get threeWellaDescription => 'A meditation tool that is inspired by the approach to meditation in Thailand';
+  String get threeWellaDescription => 'A meditation tool that is inspired by the approach to meditation in Thailand.';
 
   @override
   String get heisenbergCafeMenu => 'Heseinberg Cafe Menu';
@@ -228,4 +228,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get financeFlowAndroidUrl => 'https://play.google.com/store/apps/details?id=com.proarea.money_lover';
+
+  @override
+  String get zona => 'ZONA';
+
+  @override
+  String get zonaDescription => 'A Miami’s nightlife navigation app for discovering new venues and events.';
 }

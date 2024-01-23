@@ -14,12 +14,12 @@
     "status": "Status",
     "location": "Location",
     "description": "Description",
-    "liluPhotography": "Lilu Photography",
-    "liluPhotographyDescription": "A website for a photographer from Austin, TX.",
+    "iSeeTheWorld": "I See The World",
+    "iSeeTheWorldDescription": "A website for a photographer from Austin, TX.",
     "uAustin": "UAustin",
-    "uAustinDescription": "Navigation-directory app for Ukrainian businesses in Austin, TX. Created on a volunteer basis.",
+    "uAustinDescription": "Directory app for Ukrainian businesses in Austin, TX. Created on a volunteer basis.",
     "threeWella": "3Wella",
-    "threeWellaDescription": "A meditation tool that is inspired by the approach to meditation in Thailand",
+    "threeWellaDescription": "A meditation tool that is inspired by the approach to meditation in Thailand.",
     "heisenbergCafeMenu": "Heseinberg Cafe Menu",
     "heisenbergCafeMenuDescription": "A website for a cafe's menu.",
     "groovifi": "Groovifi",
@@ -74,5 +74,7 @@
     "groovifiIosUrl": "https://apps.apple.com/us/app/groovifi-playlist-generator/id1597777786",
     "groovifiAndroidUrl": "https://play.google.com/store/apps/details?id=com.parshendata.groovifi",
     "jiqAndroidUrl": "https://play.google.com/store/apps/details?id=com.ab.jiq",
-    "financeFlowAndroidUrl": "https://play.google.com/store/apps/details?id=com.proarea.money_lover"
+    "financeFlowAndroidUrl": "https://play.google.com/store/apps/details?id=com.proarea.money_lover",
+    "zona": "ZONA",
+    "zonaDescription": "A Miami’s nightlife navigation app for discovering new venues and events."
 }

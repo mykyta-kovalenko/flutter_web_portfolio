@@ -175,17 +175,17 @@ abstract class AppLocalizations {
   /// **'Description'**
   String get description;
 
-  /// No description provided for @liluPhotography.
+  /// No description provided for @iSeeTheWorld.
   ///
   /// In en, this message translates to:
-  /// **'Lilu Photography'**
-  String get liluPhotography;
+  /// **'I See The World'**
+  String get iSeeTheWorld;
 
-  /// No description provided for @liluPhotographyDescription.
+  /// No description provided for @iSeeTheWorldDescription.
   ///
   /// In en, this message translates to:
   /// **'A website for a photographer from Austin, TX.'**
-  String get liluPhotographyDescription;
+  String get iSeeTheWorldDescription;
 
   /// No description provided for @uAustin.
   ///
@@ -196,7 +196,7 @@ abstract class AppLocalizations {
   /// No description provided for @uAustinDescription.
   ///
   /// In en, this message translates to:
-  /// **'Navigation-directory app for Ukrainian businesses in Austin, TX. Created on a volunteer basis.'**
+  /// **'Directory app for Ukrainian businesses in Austin, TX. Created on a volunteer basis.'**
   String get uAustinDescription;
 
   /// No description provided for @threeWella.
@@ -208,7 +208,7 @@ abstract class AppLocalizations {
   /// No description provided for @threeWellaDescription.
   ///
   /// In en, this message translates to:
-  /// **'A meditation tool that is inspired by the approach to meditation in Thailand'**
+  /// **'A meditation tool that is inspired by the approach to meditation in Thailand.'**
   String get threeWellaDescription;
 
   /// No description provided for @heisenbergCafeMenu.
@@ -540,6 +540,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'https://play.google.com/store/apps/details?id=com.proarea.money_lover'**
   String get financeFlowAndroidUrl;
+
+  /// No description provided for @zona.
+  ///
+  /// In en, this message translates to:
+  /// **'ZONA'**
+  String get zona;
+
+  /// No description provided for @zonaDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A Miami’s nightlife navigation app for discovering new venues and events.'**
+  String get zonaDescription;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -10,11 +10,21 @@ import '../utils/build_context_ext.dart';
 List<Project> getProjectsData(BuildContext context) {
   return [
     Project(
-      name: context.strings.liluPhotography,
+      name: context.strings.iSeeTheWorld,
       projectPlatform: const [ProjectPlatform.web],
-      projectStatus: ProjectStatus.toBeReleased,
+      projectStatus: ProjectStatus.ongoing,
       projectLocation: ProjectLocation.theUnitedStates,
-      description: context.strings.liluPhotographyDescription,
+      description: context.strings.iSeeTheWorldDescription,
+    ),
+    Project(
+      name: context.strings.zona,
+      projectPlatform: const [
+        ProjectPlatform.ios,
+        ProjectPlatform.android,
+      ],
+      projectStatus: ProjectStatus.abandoned,
+      projectLocation: ProjectLocation.theUnitedStates,
+      description: context.strings.zonaDescription,
     ),
     Project(
       name: context.strings.uAustin,
@@ -22,7 +32,7 @@ List<Project> getProjectsData(BuildContext context) {
         ProjectPlatform.ios,
         ProjectPlatform.android,
       ],
-      projectStatus: ProjectStatus.ongoing,
+      projectStatus: ProjectStatus.paused,
       projectLocation: ProjectLocation.theUnitedStates,
       description: context.strings.uAustinDescription,
     ),
